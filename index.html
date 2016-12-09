@@ -26,19 +26,28 @@
         padding-bottom: 20px;
     }
     
-    .navbar h1 {
+    .navbar {
         color: white;
     }
-
+    
+    .left-col {
+        background-color: #dedede!important;
+    }
+    
+    .table {
+        background-color: #fff;
+        !important;
+    }
+    
     .navbar-inverse {
-    	//background-color: #169fda!important;
-    	//background-image: linear-gradient(to bottom,#169fda 0,#169fda 100%);
+        //background-color: #169fda!important;
+        //background-image: linear-gradient(to bottom,#169fda 0,#169fda 100%);
     }
     </style>
 </head>
-<!-- Latest compiled and minified JavaScript -->
 
 <body>
+    <!-- START Nav -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -55,102 +64,169 @@
             <!--/.navbar-collapse -->
         </div>
     </nav>
+    <!-- END Nav -->
     <div class="container">
-        <!-- Main Intro -->
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <!-- Start Right Column -->
+            <div class="col-md-8">
+                <!-- Main Intro -->
+
+                <!-- ALERT AREA -->
                 <div class="alert alert-danger" role="alert">
-                    <strong><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"> </span> ALERT:</strong> Remember these leads were DNQ’d in Five9, so they will vary quite a bit. Some of them will be partial signups and some will be new signups. We need to take advantage of the opportunity of these leads . All of these people are interested in PillPack and now we can sign them up.
-                </div>
-                <hr>
-                <h2>Intro</h2>
-                <p>Hi, is <strong>Benjamin Franklin</strong> available? This is <strong>George Washington</strong> calling back from PillPack Pharmacy <strong>on a recorded line</strong>. Recently you tried to sign up with PillPack to have all of your medications pre-sorted and shipped directly to you, but we were not contracted with your insurance at the time. Now, we have some great news, we are contracted with Optum and I’m calling to help you finish your account.
-                </p>
-                <br>
-                <!-- Special Info -->
-                <div class="alert alert-info" role="alert">
-                    <strong><span class="glyphicon glyphicon-ok" aria-hidden="true"> </span> Reminder:</strong>
-                    <br>
-                    <strong>We need to verify their insurance</strong>
-                    <br> Has your insurance changed since we last talked to you?
-                    <br>
-                    <br>
-                    <strong>We need to have them verify their birthdate if it is a partial signup</strong>
-                    <br> Can you verify your birthdate for me? Do you have your insurance card handy?
-                    <br>
-                </div>
-                <hr>
-                <h2>Closing</h2>
-                <p>Okay <strong><em>Benjamin</em></strong> you’re all set. I would like to connect you with a Prescription advisor who can walk you through the process and answer any detailed questions. They will work with you for the following:</p>
-                <ul>
-                    <li>Take down your current medications</li>
-                    <li>Get the pharmacy where you currently fill the medications</li>
-                    <li>And Take your credit card to finalize the process and to cover any copays or out of pocket costs for over the counter products or vitamins</li>
-                </ul>
-                <p>Alright please hold while I get the PillPack advisor on the phone……</p>
-                <p>Hello I have <strong><em>Benjamin</em></strong> <strong><em>Franklin</em></strong> on the phone, they have completed the first step of signing up for PillPack and are needing to finalize their medication and pharmacy information.</p>
-               
-                <div class="row">
-                    <div class="col-md-6">
-                        <!-- Action Area -->
-                        <h3>Example Personal Info Area</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item"><strong>CID: </strong> 1234567890</li>
-                            <li class="list-group-item"><strong>Disposition: </strong> Warm Transfer</li>
-                            <li class="list-group-item"><strong>Insurance: </strong> Humana</li>
-                            <li class="list-group-item"><strong>Last Contacted: </strong>JUly 4, 1776</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- Info Area -->
-                        <h3>Example Call Info Area</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item"><strong>Source: </strong> Some Source</li>
-                            <li class="list-group-item"><strong>Type: </strong> Warm Transfer</li>
-                            <li class="list-group-item"><strong>State: </strong> Texas</li>
-                            <li class="list-group-item"><strong>Call Attempts: </strong> 5</li>
-                        </ul>
-                    </div>
+                    <strong><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"> </span> Campaign Info:</strong> <br>
+                    @Call.campaign_description@
                 </div>
 
-                 <h3>Example Action Area</h3>
-                <ul class="list-inline">
-                    <!-- Standard button -->
-                    <li>
-                        <button type="button" class="btn btn-default">Google Docs Overview</button>
-                    </li>
-                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <li>
-                        <button type="button" class="btn btn-primary">PillPack Admin Link</button>
-                    </li>
-                    <!-- Indicates a successful or positive action -->
-                    <!-- <li>
-                        <button type="button" class="btn btn-success">Go To Someplace</button>
-                    </li>
-                    Contextual button for informational alert messages
-                    <li>
-                        <button type="button" class="btn btn-info">Go To Someplace Else</button>
-                    </li> -->
-                    <!-- Indicates caution should be taken with this action -->
-                    <li>
-                        <button type="button" class="btn btn-warning">Feedback Form</button>
-                    </li>
-                    <!-- Indicates a dangerous or potentially negative action -->
-                    <li>
-                        <button type="button" class="btn btn-danger">Report Issue</button>
-                    </li>
-                    <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
-                    <li>
-                        <button type="button" class="btn btn-link">Campaign Link</button>
-                    </li>
-                </ul>
+                <!-- /ALERT AREA -->
+                
                 <hr>
+
+                <!-- INTRO AREA -->
+                <h2>Intro</h2>
+                <p>Hi, is <strong>@Customer.first_name@ @Customer.last_name@</strong> available? This is <strong>@Agent.full_name@</strong> calling back from PillPack Pharmacy <strong>on a recorded line</strong>. Recently you tried to sign up with PillPack to have all of your medications pre-sorted and shipped directly to you, but we were not contracted with your insurance at the time. Now, we have some great news, we are contracted with Optum and I’m calling to help you finish your account.
+                </p>
+                <br>
+                <!-- /INTRO AREA -->
+                <hr>
+
+
+                <!-- PARTIAL LEADS INFO VERIFICATION -->
+                <h4><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"> </span> Partial Leads</strong></h4>
+                <div class="alert alert-info" role="alert">
+                    <strong>Please Verify!</strong><br>
+                    <strong><span class="glyphicon glyphicon-check" aria-hidden="true"></span> We need to verify your information</strong><br>
+                    <strong><span class="glyphicon glyphicon-check" aria-hidden="true"></span> We need to have them verify their birthdate if it is a partial signup</strong>
+                    <br> 
+                    <br>
+                    <a href="https://admin.pillpack.com/admin/users/@Customer.ClientUniqueId@"><button type="button" class="btn btn-primary">PillPack Admin Link</button></a> 
+                </div>
+                <!-- /PARTIAL LEADS INFO VERIFICATION -->
+
+
+                <hr>
+                <h2>Close Script</h2>
+                <p>Just a reminder, there is no additional charge for our service, the only thing you need to cover are your copays. How do you usually pay for those? What card do you want to put on file for your copays?
+                </p>
+<hr>
+
+                <h2>Mandatory Recap</h2>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">This needs to be read word for word. </h3>
+  </div>
+  <div class="panel-body">
+  <strong>So, here’s what will happen now:</strong>
+  <ul>
+<li>We have assigned a pharmacy team to you and they will transfer your medications over to PillPack Pharmacy and get any necessary refills.</li>
+<li>That process usually takes about 2 weeks, depending on how quickly we can get this information from your doctor(s) and pharmacy(s). </li></ul>
+
+<h4>(Only read this section if current refills have not been discussed already)</h4>
+<ul><li>Real quick, what medications are you going to run out of within the next 2 weeks? {Find out, from the pt, the name of the medications and approx. dates they will refill}</li>
+<li>We suggest you fill those one last time at your local pharmacy as we do not want you to go without medication.</li>
+<li>We want to start working on your account right away, so your Pharmacist will proceed with transferring the rest of your medications to PillPack. Please call us once you have picked up a supply of ______________. That number is 855-745-5725</li></ul>
+
+<p>By now you’ve received an email welcoming you to PillPack. In this email you will find a “Create My Password Now” button. We need you to click this button to verify that you’re receiving your emails from PillPack and to set up your secure password. Do you have time to do that now?
+Last thing we need you to do is call your doctor’s office and tell them to change your preferred pharmacy to PillPack and authorizing us to manage your refills.</p>
+<p>If there are any questions during the process myself or someone from the Pharmacy Team will contact you. If you have any questions please do not hesitate to contact us through the information listed on the email.
+</p>
+
+<h1>CONGRATULATIONS AND WELCOME TO PILLPACK!</h1>
+    
+  </div>
+</div>
+
+
+
+
+
             </div>
+            <!-- END Right Column -->
+            <!-- START Left Column -->
+
+            
+            <div class="col-md-4 left-col">
+            <h4><span class="glyphicon glyphicon-user" aria-hidden="true">  </span> @Agent.full_name@.</h4>
+            Team: @customer.OfficeID@
+            <hr> 
+                <h3 class="text-danger">Hold Time: @Call.hold_time@</h3>
+                <h4><span class="glyphicon glyphicon-earphone" aria-hidden="true">  </span>Customer Details</h4>
+                
+                <table class="table table-striped">
+                    <tr>
+                        <th scope="row">Disposition</th>
+                        <td>@Call.disposition_name@</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Customer Name</th>
+                        <td>@Customer.first_name@ @Customer.last_name@</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Call Number</th>
+                        <td>@Call.number@</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Address</th>
+                        <td>@Customer.street@</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">City</th>
+                        <td>@Customer.city@</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">State</th>
+                        <td>@Customer.state@</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Zip</th>
+                        <td>@Customer.zip@</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CID</th>
+                        <td>@Customer.ClientUniqueId@</td>
+                    </tr>
+                </table>
+                <h4><span class="glyphicon glyphicon-cog" aria-hidden="true">  </span>Call Details</h4>
+                <table class="table table-striped">
+                
+                <tr>
+                        <th scope="row">Attempts</th>
+                        <td>@customer.Attempts@</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Disposition</th>
+                        <td>@Call.disposition_name@</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Campaign</th>
+                        <td>@Call.campaign_name@</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">List</th>
+                        <td>@Call.type@</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Type</th>
+                        <td>@Call.type@</td>
+                    </tr>
+
+                </table>
+                <h4>Comments</h4>
+                @Call.comments@
+            </div>
+            <!-- END Left Column -->
         </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+    </script>
 </body>
 
 </html>
