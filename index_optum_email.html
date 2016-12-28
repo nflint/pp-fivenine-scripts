@@ -70,57 +70,49 @@
             <!-- Start Right Column -->
             <div class="col-md-12">
                 <!-- Main Intro -->
-                
-                <h4 class=""><span class="glyphicon glyphicon-user" aria-hidden="true">  </span> @Agent.full_name@ / @customer.OfficeID@ </h4>
-                <hr>
                 <!-- ALERT AREA -->
                 <div class="alert alert-danger" role="alert">
-                    <strong><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"> </span> Campaign Alert:</strong> <br>
-                    This is the Optum OnHold Nationwide campaign. These leads have been claim checked by the OB team. We are expecting a high close rate on these! 
+                    <strong><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"> </span> This person has responded to an email campaign announcing that we now accept OPTUM. Many of these leads have not had a test claim run!</strong> <br>
+                    
                 </div>
                 <!-- /ALERT AREA -->
-                <div>
-
-<!-- Start Customer and Call Detail Tabs -->
-<div>
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#customer_details" aria-controls="home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-earphone" aria-hidden="true">  </span> Customer Details </a></li>
-        <li role="presentation"><a href="#call_details" aria-controls="profile" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-cog" aria-hidden="true">  </span> Call Details</a></li>
-        <li role="presentation"><a href="#campaign_info" aria-controls="profile" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-education" aria-hidden="true">  </span> Campaign Info</a></li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="customer_details">
-            <div class="well">
-            <h5><span class="text-danger">Hold Time: @Call.hold_time@</span></h5>
-                <table class="table table-striped">
-                    <tr>
-                        <th scope="row">Customer Name</th>
-                        <td>@Customer.first_name@ @Customer.last_name@</td>
-                        <th scope="row">CID</th>
-                        <td>@Customer.ClientUniqueId@</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Address</th>
-                        <td>@Customer.street@</td>
-                        <th scope="row">City</th>
-                        <td>@Customer.city@</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">State</th>
-                        <td>@Customer.state@</td>
-                        <th scope="row">Zip</th>
-                        <td>@Customer.zip@</td>
-                    </tr>
-                    <tr>
-                    </tr>
-                </table>
-                <h4>Comments</h4> @Call.comments@
-            </div>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="call_details">
-            <div class="well">
+                <h4 class=""><span class="glyphicon glyphicon-user" aria-hidden="true">  </span> @Agent.full_name@ / @customer.OfficeID@ </h4>
+                <hr>
+                <h4><span class="glyphicon glyphicon-earphone" aria-hidden="true">  </span> Customer Details <span class="text-danger">Hold Time: @Call.hold_time@</span>  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseCustomerDetails" aria-expanded="false" aria-controls="collapseCustomerDetails">
+  Show/Hide More Customer Details
+</button></h4>
+                <div class="collapse" id="collapseCustomerDetails">
+                    <div class="well">
+                        <table class="table table-striped">
+                            <tr>
+                                <th scope="row">Customer Name</th>
+                                <td>@Customer.first_name@ @Customer.last_name@</td>
+                                <th scope="row">CID</th>
+                                <td>@Customer.ClientUniqueId@</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Address</th>
+                                <td>@Customer.street@</td>
+                                <th scope="row">City</th>
+                                <td>@Customer.city@</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">State</th>
+                                <td>@Customer.state@</td>
+                                <th scope="row">Zip</th>
+                                <td>@Customer.zip@</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+                        <h4>Comments</h4> @Call.comments@
+                    </div>
+                </div>
+                <h4><span class="glyphicon glyphicon-cog" aria-hidden="true">  </span> Call Details<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseCallDetails" aria-expanded="false" aria-controls="collapseCallDetails">
+  Show/Hide More Call Details
+</button></h4>
+                <div class="collapse" id="collapseCallDetails">
+                    <div class="well">
                 <table class="table table-striped">
                     <tr>
                         <th scope="row">Disposition</th>
@@ -135,57 +127,24 @@
                         <td>@Call.type@</td>
                     </tr>
                 </table>
-            </div>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="campaign_info">
-            <div class="well">
-            <p>
-            This area contains a quick overview of the campaign. In PillPack’s specific path- Byte is purchasing raw verified data from TV Response Group, warming it up in their off-shore call center, and then transferring the lead into PPAC as a warm transfer inbound call.
-            </p>
-          </div>
-        </div>
-    </div>
-</div>
-
-<!-- End Customer and Call Detail Tabs -->
-
-
+                </div>
+                </div>
                 <hr>
                 <!-- INTRO AREA -->
                 <h2>Intro</h2>
-                <p>Hi, is <strong>@Customer.first_name@ @Customer.last_name@</strong> available? This is <strong>@Agent.full_name@</strong> calling back from PillPack Pharmacy <strong>on a recorded line</strong>. Recently you tried to sign up with PillPack to have all of your medications pre-sorted and shipped directly to you, but we were not contracted with your insurance at the time. Now, we have some great news, we are contracted with Optum and I&rsquo;m calling to help you finish your account.
+                <p>Hi, is <strong>@Customer.first_name@ @Customer.last_name@</strong> available? This is <strong>@Agent.full_name@</strong> calling back from PillPack Pharmacy <strong>on a recorded line</strong>. 
+                <br><br>I am calling you in response to the email you sent us last week. We sent you an email because recently you tried to sign up with PillPack to have all of your medications pre-sorted and shipped directly to you, but we were not contracted with your insurance at the time. 
+                <br><br>Now, we have some great news, we are contracted with Optum and I’m calling to help you finish your account.
                 </p>
                 <br>
                 <!-- /INTRO AREA -->
                 <hr>
-
-                <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Show Rebuttals
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Rebuttals</h4>
-      </div>
-      <!-- Rebuttals is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/spreadsheets/d/1OyRnIC52Qc4x_wi-UE9vAcvNVD6Q6AeTo9nt7012QP0/edit#gid=0 -->
-      <div class="modal-body">
-        <iframe width="100%" class="embed-responsive-item" src="https://docs.google.com/a/pillpack.com/spreadsheets/d/1OyRnIC52Qc4x_wi-UE9vAcvNVD6Q6AeTo9nt7012QP0/pubhtml?widget=true&amp;headers=false"></iframe>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
                 <!-- PARTIAL LEADS INFO VERIFICATION -->
                 <h4><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"> </span> Partial Leads</strong></h4>
                 <div class="alert alert-info" role="alert">
                     <strong>Please Verify!</strong>
+                    <br>
+                    <strong><span class="glyphicon glyphicon-check" aria-hidden="true"></span> We need to verify your insurance!</strong>
                     <br>
                     <strong><span class="glyphicon glyphicon-check" aria-hidden="true"></span> We need to verify your information</strong>
                     <br>

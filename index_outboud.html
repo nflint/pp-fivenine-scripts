@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- TEST THE TITLE TAG -->
+    <title>Pill Pack Script- Optum Dispo (Five9 Leads)</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    
+    body {
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+    
+    .navbar h1 {
+        color: white;
+    }
+
+    .navbar-inverse {
+    	//background-color: #169fda!important;
+    	//background-image: linear-gradient(to bottom,#169fda 0,#169fda 100%);
+    }
+    </style>
+</head>
+<!-- Latest compiled and minified JavaScript -->
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1><span class="glyphicon glyphicon-import" aria-hidden="true">  </span> PillPack: Optum Dispo (Five9 Leads)</h1>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Main Intro -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="alert alert-danger" role="alert">
+                    <strong><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"> </span> ALERT:</strong> Remember these leads were DNQ’d in Five9, so they will vary quite a bit. Some of them will be partial signups and some will be new signups. We need to take advantage of the opportunity of these leads . All of these people are interested in PillPack and now we can sign them up.
+                </div>
+                <hr>
+                <h2>Intro</h2>
+                <p>Hi, is <strong>@Customer.first_name@ @Customer.last_name@</strong> available? This is <strong>@Agent.full_name@</strong> calling back from PillPack Pharmacy <strong>on a recorded line</strong>. Recently you tried to sign up with PillPack to have all of your medications pre-sorted and shipped directly to you, but we were not contracted with your insurance at the time. Now, we have some great news, we are contracted with Optum and I’m calling to help you finish your account.
+                </p>
+                <br>
+                <!-- Special Info -->
+                <div class="alert alert-info" role="alert">
+                    <strong><span class="glyphicon glyphicon-ok" aria-hidden="true"> </span> Reminder:</strong>
+                    <br>
+                    <strong>We need to verify their insurance</strong>
+                    <br> Has your insurance changed since we last talked to you?
+                    <br>
+                    <br>
+                    <strong>We need to have them verify their birthdate if it is a partial signup</strong>
+                    <br> Can you verify your birthdate for me? Do you have your insurance card handy?
+                    <br>
+                </div>
+                <hr>
+                <h2>Closing</h2>
+                <p>Okay <strong><em>Benjamin</em></strong> you’re all set. I would like to connect you with a Prescription advisor who can walk you through the process and answer any detailed questions. They will work with you for the following:</p>
+                <ul>
+                    <li>Take down your current medications</li>
+                    <li>Get the pharmacy where you currently fill the medications</li>
+                    <li>And Take your credit card to finalize the process and to cover any copays or out of pocket costs for over the counter products or vitamins</li>
+                </ul>
+                <p>Alright please hold while I get the PillPack advisor on the phone……</p>
+                <p>Hello I have <strong><em>Benjamin</em></strong> <strong><em>Franklin</em></strong> on the phone, they have completed the first step of signing up for PillPack and are needing to finalize their medication and pharmacy information.</p>
+               
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Action Area -->
+                        <h3>Example Personal Info Area</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>CID: </strong> 1234567890</li>
+                            <li class="list-group-item"><strong>Disposition: </strong> Warm Transfer</li>
+                            <li class="list-group-item"><strong>Insurance: </strong> Humana</li>
+                            <li class="list-group-item"><strong>Last Contacted: </strong>JUly 4, 1776</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Info Area -->
+                        <h3>Example Call Info Area</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Source: </strong> Some Source</li>
+                            <li class="list-group-item"><strong>Type: </strong> Warm Transfer</li>
+                            <li class="list-group-item"><strong>State: </strong> Texas</li>
+                            <li class="list-group-item"><strong>Call Attempts: </strong> 5</li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <h3>Example Action Area</h3>
+                <ul class="list-inline">
+                    <!-- Standard button -->
+                    <li>
+                        <button type="button" class="btn btn-default">Google Docs Overview</button>
+                    </li>
+                    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                    <li>
+                        <button type="button" class="btn btn-primary">PillPack Admin Link</button>
+                    </li>
+                    <!-- Indicates a successful or positive action -->
+                    <!-- <li>
+                        <button type="button" class="btn btn-success">Go To Someplace</button>
+                    </li>
+                    Contextual button for informational alert messages
+                    <li>
+                        <button type="button" class="btn btn-info">Go To Someplace Else</button>
+                    </li> -->
+                    <!-- Indicates caution should be taken with this action -->
+                    <li>
+                        <button type="button" class="btn btn-warning">Feedback Form</button>
+                    </li>
+                    <!-- Indicates a dangerous or potentially negative action -->
+                    <li>
+                        <button type="button" class="btn btn-danger">Report Issue</button>
+                    </li>
+                    <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+                    <li>
+                        <button type="button" class="btn btn-link">Campaign Link</button>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>
