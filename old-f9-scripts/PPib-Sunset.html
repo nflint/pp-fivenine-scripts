@@ -1,0 +1,557 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><STYLE>
+
+  .bluebutton
+{text-decoration:none; 
+ text-align:center; 
+ padding:20px 32px; 
+ border:solid 1px #003a50; 
+ -webkit-border-radius:4px;
+ -moz-border-radius:4px; 
+ border-radius: 4px; 
+ font:14px Verdana, Arial, Helvetica, sans-serif; 
+ font-weight:bold; 
+ color:#FFFFFF; 
+ background-color:#00adef; 
+  background-image: -moz-linear-gradient(top, #4dc1f0 0%, #00adef 100%); 
+ background-image: -webkit-linear-gradient(top, #4dc1f0 0%, #00adef 100%); 
+ background-image: -o-linear-gradient(top, #4dc1f0 0%, #00adef 100%); 
+ background-image: -ms-linear-gradient(top, #4dc1f0 0% ,#00adef 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00adef', endColorstr='#00adef',GradientType=0 ); 
+ background-image: linear-gradient(top, #4dc1f0 0% ,#00adef 100%);   
+ -webkit-box-shadow:0px 0px 4px #3e3e3e, inset 0px 0px 1px #ffffff; 
+ -moz-box-shadow: 0px 0px 4px #3e3e3e,  inset 0px 0px 1px #ffffff;  
+ box-shadow:0px 0px 4px #3e3e3e, inset 0px 0px 1px #ffffff;}
+ 
+ 
+  .greenbutton
+{text-decoration:none; 
+ text-align:center; 
+ padding:20px 32px; 
+ border:solid 1px #174c20; 
+ -webkit-border-radius:4px;
+ -moz-border-radius:4px; 
+ border-radius: 4px; 
+ font:14px Verdana, Arial, Helvetica, sans-serif; 
+ font-weight:bold; 
+ color:#FFFFFF; 
+ background-color:#50965b; 
+  background-image: -moz-linear-gradient(top, #2f9740 0%, #50965b 100%); 
+ background-image: -webkit-linear-gradient(top, #2f9740 0%, #50965b 100%); 
+ background-image: -o-linear-gradient(top, #2f9740 0%, #50965b 100%); 
+ background-image: -ms-linear-gradient(top, #2f9740 0% ,#50965b 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f9740', endColorstr='#50965b',GradientType=0 ); 
+ background-image: linear-gradient(top, #4dc1f0 0% ,#00adef 100%);   
+ -webkit-box-shadow:0px 0px 4px #3e3e3e, inset 0px 0px 1px #ffffff; 
+ -moz-box-shadow: 0px 0px 4px #3e3e3e,  inset 0px 0px 1px #ffffff;  
+ box-shadow:0px 0px 4px #3e3e3e, inset 0px 0px 1px #ffffff;} 
+  
+  
+ .pinkbutton
+{text-decoration:none; 
+ text-align:center; 
+ padding:20px 32px; 
+ border:solid 1px #68003d; 
+ -webkit-border-radius:4px;
+ -moz-border-radius:4px; 
+ border-radius: 4px; 
+ font:14px Verdana, Arial, Helvetica, sans-serif; 
+ font-weight:bold; 
+ color:#FFFFFF; 
+ background-color:#ed008c; 
+  background-image: -moz-linear-gradient(top, #e942a4 0%, #ed008c 100%); 
+ background-image: -webkit-linear-gradient(top, #e942a4 0%, #ed008c 100%); 
+ background-image: -o-linear-gradient(top, #e942a4 0%, #ed008c 100%); 
+ background-image: -ms-linear-gradient(top, #e942a4 0% ,#ed008c 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e942a4', endColorstr='#ed008c',GradientType=0 ); 
+ background-image: linear-gradient(top, #e942a4 0% ,#ed008c 100%);   
+ -webkit-box-shadow:0px 0px 4px #3e3e3e, inset 0px 0px 1px #ffffff; 
+ -moz-box-shadow: 0px 0px 4px #3e3e3e,  inset 0px 0px 1px #ffffff;  
+ box-shadow:0px 0px 4px #3e3e3e, inset 0px 0px 1px #ffffff;} 
+ 
+  .purplebutton
+{text-decoration:none; 
+ text-align:center; 
+ padding:20px 32px; 
+ border:solid 1px #25194E; 
+ -webkit-border-radius:4px;
+ -moz-border-radius:4px; 
+ border-radius: 4px; 
+ font:14px Verdana, Arial, Helvetica, sans-serif; 
+ font-weight:bold; 
+ color:#FFFFFF; 
+ background-color:#473193; 
+  background-image: -moz-linear-gradient(top, #605392 0%, #473193 100%); 
+ background-image: -webkit-linear-gradient(top, #605392 0%, #473193 100%); 
+ background-image: -o-linear-gradient(top, #605392 0%, #473193 100%); 
+ background-image: -ms-linear-gradient(top, #605392 0% ,#473193 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#605392', endColorstr='#473193',GradientType=0 ); 
+ background-image: linear-gradient(top, #605392 0% ,#473193 100%);   
+ -webkit-box-shadow:0px 0px 4px #3e3e3e, inset 0px 0px 1px #ffffff; 
+ -moz-box-shadow: 0px 0px 4px #3e3e3e,  inset 0px 0px 1px #ffffff;  
+ box-shadow:0px 0px 4px #3e3e3e, inset 0px 0px 1px #ffffff;}
+ 
+   .yellowbutton
+{text-decoration:none; 
+ text-align:center; 
+ padding:20px 32px; 
+ border:solid 1px #003a50; 
+ -webkit-border-radius:4px;
+ -moz-border-radius:4px; 
+ border-radius: 4px; 
+ font:14px Verdana, Arial, Helvetica, sans-serif; 
+ font-weight:bold; 
+ color:#000000; 
+ background-color:#ffd600; 
+  background-image: -moz-linear-gradient(top, #ffe251 0%, #ffd600 100%); 
+ background-image: -webkit-linear-gradient(top, #ffe251 0%, #ffd600 100%); 
+ background-image: -o-linear-gradient(top, #ffe251 0%, #ffd600 100%); 
+ background-image: -ms-linear-gradient(top, #ffe251 0% ,#ffd600 100%); 
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe251', endColorstr='#ffd600',GradientType=0 ); 
+ background-image: linear-gradient(top, #ffe251 0% ,#00adef 100%);   
+ -webkit-box-shadow:0px 0px 4px #3e3e3e, inset 0px 0px 1px #ffffff; 
+ -moz-box-shadow: 0px 0px 4px #3e3e3e,  inset 0px 0px 1px #ffffff;  
+ box-shadow:0px 0px 4px #3e3e3e, inset 0px 0px 1px #ffffff;}
+ 
+ 
+ 
+ </STYLE>
+
+
+
+
+<!-- LANDING PAGE-->
+<TITLE>PillPack</TITLE>
+</HEAD>
+<BODY bgcolor=' #ff5050
+
+'>
+<center><IMG SRC="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:400px;"></center>
+<center>
+<BR><BR>
+<FONT size=6 color=#00adef face=Verdana><strong>INBOUND CALL APP SUNSET </FONT></STRONG>
+<br>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><u>INTRODUCTION</u>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+How&#39s it going today <strong><FONT color=#473193>@customer.first_name@</FONT></strong>? <IMG SRC="http://help.korax.net/w/images/3/37/Yield.png" ALT="TT" STYLE="width:15px;"><br><br>
+My name is <FONT color=#473193><strong>@agent.full_name@</strong></FONT> on a recorded line and I&#39m an advisor at PillPack Pharmacy.  Let me be the first to welcome you to the PillPack family!  I&#39m excited to finish the sign up you started with us to get your medications pre-sorted and shipped to your home at no additional cost to you.
+And once we&#39re finished, you should expect your first PillPack delivery to your house in two to three weeks.</FONT>
+
+
+
+
+
+<BR><BR><BR><BR>
+<CENTER>
+<a href="#FirstCallFull" class="greenbutton"/>Full Script</a>
+	<br><br><br><br><br>
+<a href="#CallGuide" class="purplebutton"/>&nbspCall Guide</a>
+	</center>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+<!-- FULL SCRIPT
+CHANGE TYPE OF CALL ON LINE 173-->
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="FirstCallFull"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Full Script)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+
+
+
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><br><u>ASSUME THE CLOSE</u>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+
+We will be shipping your medications to your house at: <br>
+<STRONG><FONT color=#473193>@customer.street@</FONT></STRONG><br>
+<STRONG><FONT color=#473193>@customer.city@</FONT></STRONG>,&nbsp <STRONG><FONT color=#473193>@customer.state@&nbsp&nbsp@customer.zip@</FONT></STRONG><br>
+<FONT size=2 color=#000000 face=Verdana>
+
+Is that correct? <IMG SRC="http://help.korax.net/w/images/3/37/Yield.png" ALT="TT" STYLE="width:15px;">
+
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><br><u>VERIFY INFORMATION</u>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+Let me quickly make sure we have all of your information correct here:
+<UL>
+<LI><FONT color=#808080 size=2 face=Verdana>Verify Prescription Insurance Provider (Check Insurance Eligibility): <FONT size=2 color=#000000 face=Verdana>To make sure you&#39re eligible for Pillpack</font>
+<LI><FONT color=#808080 size=2 face=Verdana>Verify Demographic Information: <FONT size=2 color=#000000 face=Verdana>To ensure we have all the correct information for you</font>
+<LI><FONT color=#808080 size=2 face=Verdana>Verify All Allergies & Conditions: <FONT size=2 color=#000000 face=Verdana>To make sure we note your account</font>
+<LI><FONT color=#808080 size=2 face=Verdana>Verify Full Medication List: <FONT size=2 color=#000000 face=Verdana>So we know which medications to transfer from your pharmacy and include in your PillPack</font>
+<LI><FONT color=#808080 size=2 face=Verdana>Verify OTC/Vitamins: <FONT size=2 color=#000000 face=Verdana>OTC and Vitamins can also be included inside of your PillPack</font>
+</ul></font>
+
+
+<FONT size=4 color=#00adef face=Verdana><strong><br><u>TRANSFER TO ONBOARDING TEAM</u>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+Okay, now that I have all your prescription information, the next step is for me to transfer all of your information to our PillPack Onboarding Team.  We&#39ll reach out to your pharmacy for you and pull over your active refills so you don&#39t need to go get new prescriptions.  On average, it will be two to three weeks to get your first PillPack, so we plan on refilling your medications as your refills become available.<br><br>
+As you know, shipping is always free, and the only thing you would still need to cover is your copays.  We will make sure you always have seven (7) days to review your bill before anything is charged to your card.  <br><br>
+To finish up and transfer all of your information, I just need to collect a credit or debit card for those FUTURE copays.  I&#39m ready to add that card to your file when you are. 
+<FONT color=#808080 size=2 face=Verdana>*Add Credit/Debit Card</font><br><br><br>
+
+
+
+<FONT size=4 color=#00adef face=Verdana><strong><u>MANDATORY RECAP</u></font></strong></font><br>
+<FONT size=2 color=#000000 face=Verdana>Your information has now been sent to our pharmacy team whose sole job is to work as quickly as possible to get you set up on PillPack.  During this time, we are:
+<UL><LI>Contacting your phramacy and doctors to transfer your medications over to PillPack and get any necessary refills for you
+<LI>preparing your first set of packets and medications to ship to you
+</UL>
+By now you&#39ve received an email welcoming you to PillPack.  <br><strong>Please take a moment to click the link in the email and create a password to gain access to your secure account.</strong>  <br>Through this dashboard, you&#39ll be able to:
+<UL><LI>Manage your medications
+<LI>View your copay information
+<LI>Stay up to date on when to expect your medications to be delivered
+</UL>
+
+
+
+<FONT size=2 color=#000000 face=Verdana>If we have any questions during the process, you&#39ll hear directly from me or someone on the Pharmacy Team.  If you have any questions, please do not hesitate to contact us using the information listed on your email<br><br>
+We have your account assigned to <strong><FONT color=#473193>TEAM ADVISOR</FONT></strong>.  They&#39ll be in touch with you winin the next few days to walk you through the next steps in the process.<br><br>
+
+CONGRATULATIONS AND WELCOME TO PILLPACK!
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+<!-- FIRST CONTACT Full CYOA-->
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="CallGuide"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Choose Your Own Adventure)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><u>INTRODUCTION</u>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+Hi, is <strong><FONT color=#473193>@customer.first_name@</FONT></strong> there?<br>
+<UL><FONT size=1 color=#000000 face=Verdana>
+<LI><strong><font size=1 color=2f9740 face=Verdana>Yes:</font></strong> <font size=1 color=989898 face=Verdana>Continue</font>
+<LI><strong><font size=1 color=#C70039 face=Verdana>No:</font></strong> 
+<br><FONT size=2 color=#000000 face=Verdana>&nbsp&nbsp&nbsp&nbspIs this Mr./Mrs. <strong><FONT color=#473193>@customer.last_name@</FONT></strong>?
+<UL><FONT size=1 color=#000000 face=Verdana>
+<LI><strong><font size=1 color=#2f9740 face=Verdana>Yes:</font></strong> <font size=1 color=989898 face=Verdana>Continue</font>
+<LI><strong><font size=1 color=#C70039 face=Verdana>No:</font></strong>
+<br><FONT size=2 color=#000000 face=Verdana>&nbsp&nbsp&nbsp&nbspIs there a better number to reach <strong><FONT color=#473193>@customer.first_name@</FONT></strong>?
+</UL>
+</UL></FONT>
+<FONT size=2 color=#000000 face=Verdana>Hi, <strong><FONT color=#473193>@customer.first_name@</FONT></strong>, this is <FONT color=#473193>@agent.first_name@</FONT> calling on a recorded line for PillPack...and it looks like you recently filled out some information online and noted that you currently take multiple medications.</FONT>
+
+
+
+<center><br><br><br><br>
+<a href="#FirstCallFullCYOAShortStory" class="greenbutton"/>&nbsp&nbspNext&nbsp&nbsp</a></center>
+
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="FirstCallFullCYOAShortStory"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Choose Your Own Adventure)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><u>SHORT STORY</u>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+We know it&#39s a hassle to drive to the pharmacy, refill your medications, and keep track of your daily pill schedule when you have plenty of other things to do.  Wouldn&#39t it be nice if your pharmacy prepackaged your pills and brought them to you instead? &nbsp<IMG SRC="http://help.korax.net/w/images/3/37/Yield.png" ALT="TT" STYLE="width:15px;">
+<br><br>I just need to ask you a couple of quick questions to see if PillPack can help you manage your multiple medications better.
+
+<br><br><br><br>
+<CENTER><a href="#FirstCallFullCYOAQualification1" class="greenbutton"/>&nbsp&nbspNext&nbsp&nbsp</a></CENTER>
+
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="FirstCallFullCYOAQualification1"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Choose Your Own Adventure)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><u>QUALIFICATION (1)</u>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+How long have you been taking multiple medications?&nbsp<IMG SRC="http://help.korax.net/w/images/3/37/Yield.png" ALT="TT" STYLE="width:15px;">
+<br><br><br><br>
+
+<center><a href="#FirstCallFullCYOA1Year" class="purplebutton"/>&nbspLess than 1 Year&nbsp&nbsp</a>
+<br><br><br><br>
+<a href="#FirstCallFullCYOA2orMore" class="yellowbutton"/>&nbsp&nbsp&nbsp2 Years or More&nbsp&nbsp</a></center>
+
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="FirstCallFullCYOA1Year"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Choose Your Own Adventure)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><i>1 YEAR or LESS</i>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+I&#39ve heard it can be a hassle to get into a routine when you&#39re just starting to manage your medications.
+<center><br><br><br><br>
+<a href="#FirstCallFullCYOAQualification2No" class="greenbutton"/>&nbsp&nbspNext&nbsp&nbsp</a>
+</center>
+
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br>
+
+
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="FirstCallFullCYOA2orMore"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Choose Your Own Adventure)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><i>2 YEARS or MORE</i>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+Have you ever used a delivery service for your medications before?&nbsp<IMG SRC="http://help.korax.net/w/images/3/37/Yield.png" ALT="TT" STYLE="width:15px;">
+
+<center><br><br><br><br>
+<a href="#FirstCallFullCYOAQualificationDeliveryYes" class="purplebutton"/>&nbsp&nbspYes&nbsp&nbsp</a>
+<br><br><br><br>
+<a href="#FirstCallFullCYOAQualificationDeliveryNo" class="yellowbutton"/>&nbsp&nbsp&nbspNo&nbsp&nbsp&nbsp</a></center>
+
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="FirstCallFullCYOAQualificationDeliveryYes"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Choose Your Own Adventure)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><i>DELIVERY EXPERIENCE</i>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+What stopped you from having your medications delivered?&nbsp<IMG SRC="http://help.korax.net/w/images/3/37/Yield.png" ALT="TT" STYLE="width:15px;">
+
+<br><br><br><br>
+<center>
+<a href="#FirstCallFullCYOAQualification2No" class="purplebutton"/>No Longer Using</a><br><br><br><br>
+<a href="#FirstCallFullCYOAQualificationStillUsing" class="yellowbutton"/>&nbsp&nbsp&nbsp&nbsp&nbspStill Using&nbsp&nbsp&nbsp&nbsp&nbsp</a></center>
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="FirstCallFullCYOAQualificationDeliveryNo"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Choose Your Own Adventure)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><i>EVER USED DELIVERY</i>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+Have you ever looked into it?&nbsp<IMG SRC="http://help.korax.net/w/images/3/37/Yield.png" ALT="TT" STYLE="width:15px;">
+<br><br><br><br>
+
+<center>
+<a href="#FirstCallFullCYOAQualificationStillUsing" class="purplebutton"/>&nbsp&nbspYes&nbsp&nbsp</a>
+<br><br><br><br>
+
+<a href="#FirstCallFullCYOAQualification2No" class="yellowbutton"/>&nbsp&nbsp&nbspNo&nbsp&nbsp&nbsp</a></center>
+
+
+
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="FirstCallFullCYOAQualification2Yes"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Choose Your Own Adventure)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br>QUALIFICATION (2)
+</font></strong><br><br>
+<FONT size=2 color=#000000 face=Verdana>
+What kept you from using a delivery service before? <br><br>How many medications and prescriptions do you currently take?&nbsp<IMG SRC="http://help.korax.net/w/images/3/37/Yield.png" ALT="TT" STYLE="width:15px;"><br><br><br><br>
+
+<center><a href="#FirstCallFullCYOAQualification3" class="greenbutton"/>&nbsp&nbspNext&nbsp&nbsp</a>
+</center>
+
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="FirstCallFullCYOAQualificationStillUsing"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Choose Your Own Adventure)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><i>HAS DELIVERY ALREADY</i>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+It&#39s nice to have your medications delivered to you, right? <IMG SRC="http://help.korax.net/w/images/3/37/Yield.png" ALT="TT" STYLE="width:15px;">
+<br>I know you&#39re going to love how much better PillPack is than every other delivery service out there. 
+<br><br><br><br>
+<center>
+<a href="#FirstCallFullCYOAQualification2No" class="greenbutton"/>&nbsp&nbspNext&nbsp&nbsp</a>
+</center>
+
+
+
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="FirstCallFullCYOAQualification2No"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Choose Your Own Adventure)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><u>QUALIFICATION (2)</u>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+How many medications and prescriptions do you currently take?&nbsp<IMG SRC="http://help.korax.net/w/images/3/37/Yield.png" ALT="TT" STYLE="width:15px;"><br><br><br><br>
+
+<center>
+<a href="#FirstCallFullCYOAQualification3" class="greenbutton"/>&nbsp&nbspNext&nbsp&nbsp</a>
+</center>
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="FirstCallFullCYOAQualificationNotUsing"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Choose Your Own Adventure)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br>QUALIFICATION (2)
+</font></strong><br><br>
+<FONT size=2 color=#000000 face=Verdana>
+I know you&#39re going to love how much better PillPack is.  <br><br>How many medications and prescriptions do you currently take?&nbsp<IMG SRC="http://help.korax.net/w/images/3/37/Yield.png" ALT="TT" STYLE="width:15px;"><br><br><br><br>
+
+<center>
+<a href="#FirstCallFullCYOAQualification3" class="greenbutton"/>&nbsp&nbspNext&nbsp&nbsp</a>
+</center>
+
+
+
+
+
+
+
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="FirstCallFullCYOAQualification3"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Choose Your Own Adventure)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><u>QUALIFICATION (3)</u>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+How do you go about keeping all of your medications organized?&nbsp<IMG SRC="http://help.korax.net/w/images/3/37/Yield.png" ALT="TT" STYLE="width:15px;"><br><br><br><br>
+
+<center>
+<a href="#FirstCallFullCYOAPresentation" class="greenbutton"/>&nbsp&nbspNext&nbsp&nbsp</a></center>
+
+
+
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="FirstCallFullCYOAPresentation"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Choose Your Own Adventure)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><u>PRESENTATION</u>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+You know <strong><FONT color=#473193>@customer.first_name@</FONT></strong> , I can&#39t tell you how many people PillPack has helped who..... (need/pain restated) <br><FONT color =#808080 size=1>[i.e. take ____ medications, hate driving to the pharmacy, had a bad experience with a less friendly delivery service, etc.]</font>  What we do is pre-sort every medication for you take and then organize them into individual packets for you.<br><br>Then, to make it really easy, we take those packets and print the date and time you need to take your medications right on the packet itself.<br><br>
+
+You&#39ll never have to worry about what to take or when to take it - ever again.  And the best part is, you get the individually dosed packets delivered right to your home without having to pay a penny more than your current co-pay.  It doesn&#39t matter if you pay $10 per prescription or nothing at all, your cost will be exactly the same.  We can even add vitamins, supplements, or any other over-the-counter medication you take and include it with your individual packets.  Sounds pretty good right?<br><br>
+
+All I need to do is set up your profile with your address, medications, insurance, and pharmacy contact information.  Then I&#39ll enter your preferred method of payment for any co-pays or supplements you might include in your packets.  After that is done, we can get your next round of medications packaged and delivered directly to you.  <br><br>
+<FONT size=1 color=#50965b face=Verdana><strong><u><i>https://www.pillpack.com/signup?is_call_center_signup=Tri-1&utm_source=Tri-1&utm_medium=callcenter&c3ch=CallCenter&c3nid=Tri-1</u></i></font></strong><br>
+<br><br><br>
+
+<center>
+<a href="#FirstCallFullCYOAClosing" class="greenbutton"/>&nbsp&nbspNext&nbsp&nbsp</a></center>
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<STRONG><FONT color=#808080 size=5 
+face=Verdana><a name="FirstCallFullCYOAClosing"><div align="right"><br><img src="http://sharinghub.wegohealth.com/system/the-pillpack-resource-center/logo/thumb/PillPack_Logo-ce674bccbb88a6590c7a037beac1df9e.png" ALT="PP" STYLE="width:100px;"></a></div></FONT></STRONG>
+<STRONG><FONT color=#473193 size=6 
+face=Verdana><center>PRIME CALL<br><FONT color=#473193 size=3 
+face=Verdana>(Choose Your Own Adventure)</font><br><font size=2 color=#000000></STRONG></font></center></FONT></center>
+<FONT size=4 color=#00adef face=Verdana><strong><br><br><u>CLOSING</u>
+</font></strong><br>
+<FONT size=2 color=#000000 face=Verdana>
+Okay <strong><FONT color=#473193>@customer.first_name@</FONT></strong>, you&#39re all set.  We'll send you a confirmation email in the next couple minutes and you just need to set your password to activate your account and let our pharmacists here at PillPack contact your pharmacy and verify each medications, dosage, and frequency. If we have any questions for you, our pharmacists will give you a call. Otherwise, we&#39ll have everything we need and you&#39ll get an email from us one week before your prescriptions arrive. <br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</BODY></HTML>

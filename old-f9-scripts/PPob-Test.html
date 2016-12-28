@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- TEST THE TITLE TAG -->
+    <title>Pill Pack Script- </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    
+    body {
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+    
+    .navbar {
+        color: white;
+    }
+    
+    .left-col {
+        background-color: #dedede!important;
+    }
+    
+    .table {
+        background-color: #fff;
+        !important;
+    }
+    
+    .navbar-inverse {
+        //background-color: #169fda!important;
+        //background-image: linear-gradient(to bottom,#169fda 0,#169fda 100%);
+    }
+    </style>
+</head>
+
+<body>
+    <!-- START Nav -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1><span class="glyphicon glyphicon-import" aria-hidden="true">  </span> PillPack: @customer.List Source@</h1>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- END Nav -->
+    <div class="container">
+        <div class="row">
+            <!-- Start Right Column -->
+            <div class="col-md-12">
+                <!-- Main Intro -->
+                <!-- ALERT AREA -->
+                <!-- <div class="alert alert-danger" role="alert">
+                    <strong><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"> </span> Campaign Info:</strong> <br>
+                    
+                </div> -->
+                <!-- /ALERT AREA -->
+                <h4 class=""><span class="glyphicon glyphicon-user" aria-hidden="true">  </span> @Agent.full_name@ / @customer.OfficeID@ </h4>
+                <hr>
+                <h4><span class="glyphicon glyphicon-earphone" aria-hidden="true">  </span> Customer Details <span class="text-danger">Hold Time: @Call.hold_time@</span>  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseCustomerDetails" aria-expanded="false" aria-controls="collapseCustomerDetails">
+  Show/Hide More Customer Details
+</button></h4>
+                <div class="collapse" id="collapseCustomerDetails">
+                    <div class="well">
+                        <table class="table table-striped">
+                            <tr>
+                                <th scope="row">Customer Name</th>
+                                <td>@Customer.first_name@ @Customer.last_name@</td>
+                                <th scope="row">CID</th>
+                                <td>@Customer.ClientUniqueId@</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Address</th>
+                                <td>@Customer.street@</td>
+                                <th scope="row">City</th>
+                                <td>@Customer.city@</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">State</th>
+                                <td>@Customer.state@</td>
+                                <th scope="row">Zip</th>
+                                <td>@Customer.zip@</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </table>
+                        <h4>Comments</h4> @Call.comments@
+                    </div>
+                </div>
+                <h4><span class="glyphicon glyphicon-cog" aria-hidden="true">  </span> Call Details<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseCallDetails" aria-expanded="false" aria-controls="collapseCallDetails">
+  Show/Hide More Call Details
+</button></h4>
+                <div class="collapse" id="collapseCallDetails">
+                    <div class="well">
+                <table class="table table-striped">
+                    <tr>
+                        <th scope="row">Disposition</th>
+                        <td>@Call.disposition_name@</td>
+                        <th scope="row">Attempts</th>
+                        <td>@customer.Attempts@</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Campaign</th>
+                        <td>@Call.campaign_name@</td>
+                        <th scope="row">Type</th>
+                        <td>@Call.type@</td>
+                    </tr>
+                </table>
+                </div>
+                </div>
+                <hr>
+                <!-- INTRO AREA -->
+                <h2>Intro</h2>
+                <p>Hi, is <strong>@Customer.first_name@ @Customer.last_name@</strong> available? This is <strong>@Agent.full_name@</strong> calling back from PillPack Pharmacy <strong>on a recorded line</strong>. Recently you tried to sign up with PillPack to have all of your medications pre-sorted and shipped directly to you, but we were not contracted with your insurance at the time. Now, we have some great news, we are contracted with Optum and I&rsquo;m calling to help you finish your account.
+                </p>
+                <br>
+                <!-- /INTRO AREA -->
+                <hr>
+                <!-- PARTIAL LEADS INFO VERIFICATION -->
+                <h4><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"> </span> Partial Leads</strong></h4>
+                <div class="alert alert-info" role="alert">
+                    <strong>Please Verify!</strong>
+                    <br>
+                    <strong><span class="glyphicon glyphicon-check" aria-hidden="true"></span> We need to verify your information</strong>
+                    <br>
+                    <strong><span class="glyphicon glyphicon-check" aria-hidden="true"></span> We need to have them verify their birthdate if it is a partial signup</strong>
+                    <br>
+                    <br>
+                    <a href="https://admin.pillpack.com/admin/users/@Customer.ClientUniqueId@" target="_blank">
+                        <button type="button" class="btn btn-primary">PillPack Admin Link</button>
+                    </a>
+                </div>
+                <!-- /PARTIAL LEADS INFO VERIFICATION -->
+                <hr>
+                <h2>Close Script</h2>
+                <p>Just a reminder, there is no additional charge for our service, the only thing you need to cover are your copays. How do you usually pay for those? What card do you want to put on file for your copays?
+                </p>
+                <hr>
+                <h2>Mandatory Recap</h2>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">This needs to be read word for word. </h3>
+                    </div>
+                    <div class="panel-body">
+                        <strong>So, here's what will happen now:</strong>
+                        <ul>
+                            <li>We have assigned a pharmacy team to you and they will transfer your medications over to PillPack Pharmacy and get any necessary refills.</li>
+                            <li>That process usually takes about 2 weeks, depending on how quickly we can get this information from your doctor(s) and pharmacy(s). </li>
+                        </ul>
+                        <h4>(Only read this section if current refills have not been discussed already)</h4>
+                        <ul>
+                            <li>Real quick, what medications are you going to run out of within the next 2 weeks? {Find out, from the pt, the name of the medications and approx. dates they will refill}</li>
+                            <li>We suggest you fill those one last time at your local pharmacy as we do not want you to go without medication.</li>
+                            <li>We want to start working on your account right away, so your Pharmacist will proceed with transferring the rest of your medications to PillPack. Please call us once you have picked up a supply of ______________. That number is 855-745-5725</li>
+                        </ul>
+                        <p>By now you've received an email welcoming you to PillPack. In this email you will find a "Create My Password Now" button. We need you to click this button to verify that you're receiving your emails from PillPack and to set up your secure password. Do you have time to do that now? Last thing we need you to do is call your doctor's office and tell them to change your preferred pharmacy to PillPack and authorizing us to manage your refills.</p>
+                        <p>If there are any questions during the process myself or someone from the Pharmacy Team will contact you. If you have any questions please do not hesitate to contact us through the information listed on the email.
+                        </p>
+                        <h1>CONGRATULATIONS AND WELCOME TO PILLPACK!</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
