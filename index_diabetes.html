@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-
-<!-- Header-Nav area-->
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -17,36 +15,34 @@
     <![endif]-->
 
 	<style type="text/css">
-	   /* Move down content because we have a fixed navbar that is 50px tall */
-	   
-	   body {
-	       padding-top: 80px;
-	       padding-bottom: 20px;
-	   }
-	   
-	   .navbar {
-	       color: white;
-	   }
-	   
-	   .left-col {
-	       background-color: #dedede!important;
-	   }
-	   
-	   .table {
-	       background-color: #fff;
-	       !important;
-	   }
-	   
-	   .navbar-inverse {
-	       //background-color: #169fda!important;
-	       //background-image: linear-gradient(to bottom,#169fda 0,#169fda 100%);
-	   }
+	      /* Move down content because we have a fixed navbar that is 50px tall */
+	      
+	      body {
+	          padding-top: 80px;
+	          padding-bottom: 20px;
+	      }
+	      
+	      .navbar {
+	          color: white;
+	      }
+	      
+	      .left-col {
+	          background-color: #dedede!important;
+	      }
+	      
+	      .table {
+	          background-color: #fff;
+	          !important;
+	      }
+	      
+	      .navbar-inverse {
+	          //background-color: #169fda!important;
+	          //background-image: linear-gradient(to bottom,#169fda 0,#169fda 100%);
+	      }
 	</style>
 </head>
 <body>
-
-
-<!-- START Nav -->
+	<!-- START Nav -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -55,10 +51,7 @@
 			</div>
 			<div class="navbar-collapse collapse" id="navbar"></div><!--/.navbar-collapse -->
 		</div>
-	</nav>
-<!-- END Nav -->
-	
-<!-- Start Campaign Alert -->		
+	</nav><!-- END Nav -->
 	<div class="container">
 		<div class="row">
 			<!-- Start Right Column -->
@@ -69,12 +62,10 @@
 				<!-- ALERT AREA -->
 				<div class="alert alert-danger" role="alert">
 					<strong><span aria-hidden="true" class="glyphicon glyphicon-warning-sign"></span> Campaign Alert:</strong><br>
-					This is the Optum OnHold Nationwide campaign. These leads have been claim checked by the OB team. We are expecting a high close rate on these!
+					NEEED INFORMATION
 				</div><!-- /ALERT AREA -->
 				<div>
-
-
-<!-- Start Customer and Call Detail Tabs -->
+					<!-- Start Customer and Call Detail Tabs -->
 					<div>
 						<!-- Nav tabs -->
 						<ul class="nav nav-tabs" role="tablist">
@@ -144,29 +135,32 @@
 						</div>
 					</div>
 					<hr>
-<!-- End Customer and Call Detail Tabs -->
-
-					
-<!-- INTRO AREA -->
-					<h2>Intro</h2>
-					<p>Hi, is <strong>@Customer.first_name@ @Customer.last_name@</strong> available? This is <strong>@Agent.full_name@</strong> calling back from PillPack Pharmacy <strong>on a recorded line</strong>. Recently you tried to sign up with PillPack to have all of your medications pre-sorted and shipped directly to you, but we were not contracted with your insurance at the time. Now, we have some great news, we are contracted with Optum and I&rsquo;m calling to help you finish your account.</p>
-<!-- /INTRO AREA -->
-
-<!-- General Help Info -->
+					<!-- End Customer and Call Detail Tabs -->
+					<!-- INTRO AREA -->
+					<h2><span aria-hidden="true" class="glyphicon glyphicon-earphone"></span> Intro</h2>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h5 class="panel-title">Call Introduction</h5>
+						</div>
+						<div class="panel-body">
+							<p>Thank you for calling PillPack. This is <strong>@Agent.full_name@</strong> on a recorded line. How can I help you?</p>
+							<p>(Partner transfer)</p>
+							<p>Hi, <strong>@Customer.first_name@ @Customer.last_name@</strong>. Again my name is <strong>@Agent.full_name@</strong>, I am an advisor with PillPack Pharmacy and I will be helping you simplify the way you manage your health.</p><br>
+						</div>
+					</div><!-- /INTRO AREA -->
+					<!-- General Help Info -->
 					<div class="row">
 						<!-- Sales Blast Modal -->
 						<div class="col-xs-3">
 							<!-- Button trigger modal -->
-							 <button class="btn btn-primary center-block" data-target="#SalesBlast" data-toggle="modal" type="button">Sales Blast</button>
-							<!-- Modal -->
+							<button class="btn btn-primary center-block" data-target="#SalesBlast" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Sales Blast</button> <!-- Modal -->
 							<div aria-labelledby="SalesBlastLabel" class="modal fade" id="SalesBlast" role="dialog" tabindex="-1">
 								<div class="modal-dialog modal-lg" role="document">
 									<div class="modal-content">
 										<div class="modal-header">
 											<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-											<h4 class="modal-title" id="SalesBlastLabel">Sales Blast</h4>
-										</div>
-		<!-- Sales Blast is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/document/d/1yTA2WjBKEL14BybsISjLJsi0DfP00IH1YXzrq7If7X0/edit -->
+											<h5 class="modal-title" id="SalesBlastLabel">Sales Blast</h5>
+										</div><!-- Sales Blast is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/document/d/1yTA2WjBKEL14BybsISjLJsi0DfP00IH1YXzrq7If7X0/edit -->
 										<div class="modal-body">
 											<iframe frameborder="0" height="600" src="https://docs.google.com/document/d/1yTA2WjBKEL14BybsISjLJsi0DfP00IH1YXzrq7If7X0/pub?embedded=true" style="zoom:0.60" width="99.6%"></iframe>
 										</div>
@@ -180,13 +174,13 @@
 						<!-- Low Interest Rebuttal Modal -->
 						<div class="col-xs-3">
 							<!-- Button trigger modal -->
-							 <button class="btn btn-primary center-block" data-target="#Rebuttal" data-toggle="modal" type="button">Low Interest Rebuttal</button> 								<!-- Modal -->
+							<button class="btn btn-primary center-block" data-target="#Rebuttal" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Low Interest Rebuttal</button> <!-- Modal -->
 							<div aria-labelledby="RebuttalLabel" class="modal fade" id="Rebuttal" role="dialog" tabindex="-1">
 								<div class="modal-dialog modal-lg" role="document">
 									<div class="modal-content">
 										<div class="modal-header">
 											<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-											<h4 class="modal-title" id="RebuttalLabel">Low Interest Rebuttal</h4>
+											<h5 class="modal-title" id="RebuttalLabel">Low Interest Rebuttal</h5>
 										</div><!-- Rebuttals is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/spreadsheets/d/1OyRnIC52Qc4x_wi-UE9vAcvNVD6Q6AeTo9nt7012QP0/edit#gid=0 -->
 										<div class="modal-body">
 											<iframe frameborder="0" height="600" src="https://docs.google.com/document/d/1eEEojNRNTa7hHhlSybtLwusqTzWtvqtzFaXQ3gdclhs/pub?embedded=true" style="zoom:0.60" width="99.6%"></iframe>
@@ -201,13 +195,13 @@
 						<!-- Detailed Rebuttal Modal -->
 						<div class="col-xs-3">
 							<!-- Button trigger modal -->
-							 <button class="btn btn-primary center-block" data-target="#DetailedRebuttal" data-toggle="modal" type="button">Detailed Rebuttals</button> <!-- Modal -->
+							<button class="btn btn-primary center-block" data-target="#DetailedRebuttal" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Detailed Rebuttals</button> <!-- Modal -->
 							<div aria-labelledby="DetailedRebuttalLabel" class="modal fade" id="DetailedRebuttal" role="dialog" tabindex="-1">
 								<div class="modal-dialog modal-lg" role="document">
 									<div class="modal-content">
 										<div class="modal-header">
 											<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-											<h4 class="modal-title" id="DetailedRebuttalLabel">Detailed Rebuttals</h4>
+											<h5 class="modal-title" id="DetailedRebuttalLabel">Detailed Rebuttals</h5>
 										</div><!-- Rebuttals is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/spreadsheets/d/1OyRnIC52Qc4x_wi-UE9vAcvNVD6Q6AeTo9nt7012QP0/edit#gid=0 -->
 										<div class="modal-body">
 											<iframe frameborder="0" height="600" src="https://docs.google.com/a/pillpack.com/spreadsheets/d/1OyRnIC52Qc4x_wi-UE9vAcvNVD6Q6AeTo9nt7012QP0/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="zoom:0.60" width="99.6%"></iframe>
@@ -221,17 +215,74 @@
 						</div><!-- /Detailed Rebuttal Modal -->
 					</div><br>
 					<hr>
-<!-- /General Help Info -->
-
-<!-- /INTRO AREA -->
-					
-<!-- DIABETES AREA -->
-					<h2>Diabetes Section <button aria-controls="collapseDiabetesDetails" aria-expanded="false" class="btn btn-link" data-target="#collapseDiabetesDetails" data-toggle="collapse" type="button">Show/Hide Diabetes Details</button></h2>
+					<!-- /General Help Info -->
+					<!-- /INTRO AREA -->
+					<!-- ualification & Verification Area -->
+					<h2><span aria-hidden="true" class="glyphicon glyphicon-check"></span> Qualification & Verification</h2>
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h5 class="panel-title">Diabetes & Med Count Verification</h5>
+							</div>
+							<div class="panel-body">
+								<p>I understand that you currently take 5 or more medications, is that correct? And do you have diabetes? Ok. Thank you.</p>
+								<ul>
+									<li><strong>If YES to 5 or more meds</strong> - we can offer them a $25 coupon for any OTCs</li>
+									<li><strong>If NO to diabetes</strong> - skip diabetes section of the script</li>
+								</ul>
+								<p>The reason I ask is that PillPack is specifically designed for people who take multiple prescription medications. What separates us from all other pharmacies is that our pharmacists synchronize your medications and ship them to you in customized dose packets, at no additional cost to you.</p>
+							</div>
+						</div>
+					</div>
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h5 class="panel-title">Verify information in partial and collect new info when necessary</h5>
+							</div>
+							<div class="panel-body">
+								<p>To start customizing your PillPack, all we need to do is collect some basic information from you.</p>
+								<ul>
+									<li>First, can I have you verify your email for me? Thanks</li>
+									<li>Which insurance provider covers your medications? (Verify and collect insurance info)</li>
+									<li>And the address we will be shipping to is:</li>
+									<li style="list-style: none; display: inline">
+										<div style="margin-left: 2em">
+											<ul class="list list-unstyled">
+												<li>@Customer.street@</li>
+												<li>@Customer.city@</li>
+												<li>@Customer.state@</li>
+												<li>@Customer.zip@</li>
+											</ul>
+										</div>
+									</li>
+									<li>is that correct?</li>
+								</ul><br>
+								<p>As I said before, there is no additional cost for our service, the only thing you still need to cover are your copays, if you have any.</p>
+								<ul>
+									<li>What debit or credit card do you want on your account?</li>
+								</ul>
+								<p>Next, I need to collect your medication list and which pharmacies you currently use, so your PillPack pharmacist can transfer over your prescriptions and schedule your first PillPack.</p>
+							</div>
+						</div>
+					</div>
+					<div class="alert alert-warning" role="alert">
+						<strong>Please Verify!</strong><br>
+						<!-- <strong><span aria-hidden="true" class="glyphicon glyphicon-check"></span> We need to verify your information</strong><br> -->
+						 <strong><span aria-hidden="true" class="glyphicon glyphicon-check"></span> We need to have them verify their birthdate if it is a partial signup</strong><br>
+						<br>
+						<!-- <a href="https://admin.pillpack.com/admin/users/@Customer.ClientUniqueId@" target="_blank">
+                                <button type="button" class="btn btn-primary">PillPack Admin Link</button>
+                                </a> -->
+					</div>
+					<hr>
+					<!-- /Qualification & Verification Area -->
+					<!-- DIABETES AREA -->
+					<button aria-controls="collapseDiabetesDetails" aria-expanded="false" class="btn btn-link" data-target="#collapseDiabetesDetails" data-toggle="collapse" type="button">
+					<h2><span aria-hidden="true" class="glyphicon glyphicon-plus-sign"></span> Diabetes Section</h2>Show/Hide Diabetes Details</button><br>
+					<br>
 					<div class="collapse" id="collapseDiabetesDetails">
 						<div class="row">
-							
-<!-- Diabetes Info -->							
-							<!-- Insulin Reference Modal -->
+							<!-- Diabetes Info --><!-- Insulin Reference Modal -->
 							<div class="col-xs-3">
 								<!-- Button trigger modal -->
 								<button class="btn btn-primary center-block" data-target="#myModal" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Insulin Reference Sheets</button> <!-- Modal -->
@@ -240,7 +291,7 @@
 										<div class="modal-content">
 											<div class="modal-header">
 												<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-												<h4 class="modal-title" id="myModalLabel">Insulin Reference Sheet</h4>
+												<h5 class="modal-title" id="myModalLabel">Insulin Reference Sheet</h5>
 											</div><!-- Insulin Reference is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/spreadsheets/d/1wOJQVKdbZWu5nQcQ_bmCm6q7XSE3OWt1Px9dPdiJ41Y/edit#gid=0 -->
 											<div class="modal-body">
 												<iframe frameborder="0" height="600" src="https://docs.google.com/spreadsheets/d/1wOJQVKdbZWu5nQcQ_bmCm6q7XSE3OWt1Px9dPdiJ41Y/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="zoom:0.60" width="99.6%"></iframe>
@@ -255,13 +306,13 @@
 							<!-- Test Strip Copay Check Modal -->
 							<div class="col-xs-3">
 								<!-- Button trigger modal -->
-								 <button class="btn btn-primary center-block" data-target="#TestStrip" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Checking a Copay for Test Strips</button> <!-- Modal -->
+								<button class="btn btn-primary center-block" data-target="#TestStrip" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Checking a Copay for Test Strips</button> <!-- Modal -->
 								<div aria-labelledby="TestStripLabel" class="modal fade" id="TestStrip" role="dialog" tabindex="-1">
 									<div class="modal-dialog modal-lg" role="document">
 										<div class="modal-content">
 											<div class="modal-header">
 												<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-												<h4 class="modal-title" id="TestStripLabel">Insulin Reference Sheet</h4>
+												<h5 class="modal-title" id="TestStripLabel">Insulin Reference Sheet</h5>
 											</div><!-- Insulin Reference is an Iframe of the Publish to Web Version of this doc: NEED LINK -->
 											<div class="modal-body">
 												<iframe frameborder="0" height="600" src="https://docs.google.com/spreadsheets/d/1gp58wukz8kfCPjY_H2fwH1FqH540jiiAj99YOMsAxrI/pubhtml" style="zoom:0.60" width="99.6%"></iframe>
@@ -276,13 +327,13 @@
 							<!-- Insulin Reference Modal -->
 							<div class="col-xs-3">
 								<!-- Button trigger modal -->
-								 <button class="btn btn-primary center-block" data-target="#GeneralInfo" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> General Diabetes Info</button> <!-- Modal -->
+								<button class="btn btn-primary center-block" data-target="#GeneralInfo" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> General Diabetes Info</button> <!-- Modal -->
 								<div aria-labelledby="GeneralInfoLabel" class="modal fade" id="GeneralInfo" role="dialog" tabindex="-1">
 									<div class="modal-dialog modal-lg" role="document">
 										<div class="modal-content">
 											<div class="modal-header">
 												<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-												<h4 class="modal-title" id="GeneralInfoLabel">General Diabetes Info</h4>
+												<h5 class="modal-title" id="GeneralInfoLabel">General Diabetes Info</h5>
 											</div><!-- Insulin Reference is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/document/d/1MWK0_HPqoQ0xOefHV_GdxqhWoH1eYozhU8TaAI7xYFw/edit -->
 											<div class="modal-body">
 												<iframe frameborder="0" height="600" src="https://docs.google.com/document/d/1MWK0_HPqoQ0xOefHV_GdxqhWoH1eYozhU8TaAI7xYFw/pub?embedded=true" style="zoom:0.60" width="99.6%"></iframe>
@@ -296,17 +347,14 @@
 							</div><!-- /Insulin Reference Modal -->
 						</div><br>
 						<br>
-<!-- /Diabetes Info -->
-
-<!-- Additional Text Area -->
-
-<!-- /Additional Text Area -->
-
+						<!-- /Diabetes Info -->
+						 <!-- Diabetes Script -->
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<h4 class="panel-title">Let's start with your diabetes medications, do you currently use insulin?</h4>
+								<h5 class="panel-title">Insulin</h5>
 							</div>
 							<div class="panel-body">
+								<p>Let's start with your diabetes medications, do you currently use insulin?</p>
 								<ul>
 									<li><strong>If yes</strong> - What's the name of it?</li>
 									<li>And do you use the vial or the pen?</li>
@@ -333,9 +381,10 @@
 						</div>
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<h4 class="panel-title">Do you test your blood sugar? How many times a day do you test?</h4>
+								<h5 class="panel-title">Blood Sugar Testing</h5>
 							</div>
 							<div class="panel-body">
+								<p>Do you test your blood sugar? How many times a day do you test?</p>
 								<ul>
 									<li><strong>If yes</strong> - what kind of meter and test strips do you use?</li>
 									<li style="list-style: none; display: inline">
@@ -355,9 +404,10 @@
 						</div>
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<h4 class="panel-title">(If they use insulin and/or test their blood sugar then ask): Do you have a prescription for alcohol swabs at your current pharmacy?</h4>
+								<h5 class="panel-title">Alcohol Swabs: if they NO NOT use insulin and/or test their blood sugar then skip.</h5>
 							</div>
 							<div class="panel-body">
+								<p>Do you have a prescription for alcohol swabs at your current pharmacy?</p>
 								<ul>
 									<li><strong>If yes</strong> - add it to the med list</li>
 									<li><strong>If no</strong> - ask: &ldquo;Would you like us to send you alcohol swabs in your shipments so you have everything you need in one place?&rdquo;</li>
@@ -371,40 +421,47 @@
 						</div>
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<h4 class="panel-title">Do you take any oral medications for your diabetes?</h4>
+								<h5 class="panel-title">Other Diabetes Meds & Transition</h5>
 							</div>
 							<div class="panel-body">
+								<p>Do you take any oral medications for your diabetes?</p>
 								<ul>
 									<li>(Obtain medication list including strength and how many times per day, dose times if they have a preference, and pharmacy to transfer those prescriptions from)</li>
-								</ul>
+								</ul><br>
+								<p>The reason that we're such a great fit for people with diabetes is we recognize that a lot of people living with diabetes have additional conditions that they manage, for example high blood pressure or high cholesterol. This amounts to a lot of additional time and stress managing all their medications. We will sort and manage your medications so you can focus on staying healthy.</p>
 							</div>
-						</div>
-						<p>The reason that we're such a great fit for people with diabetes is we recognize that a lot of people living with diabetes have additional conditions that they manage, for example high blood pressure or high cholesterol. This amounts to a lot of additional time and stress managing all their medications. We will sort and manage your medications so you can focus on staying healthy.</p>
+						</div><!-- /Diabetes Script -->
 					</div>
 				</div>
 				<hr>
-<!-- /DIABETES AREA -->
-
-<!-- PARTIAL LEADS INFO VERIFICATION -->
-				<h2><span aria-hidden="true" class="glyphicon glyphicon-ok"></span> Partial Leads</h2>
-				<div class="alert alert-info" role="alert">
-					<strong>Please Verify!</strong><br>
-					<strong><span aria-hidden="true" class="glyphicon glyphicon-check"></span> We need to verify your information</strong><br>
-					<strong><span aria-hidden="true" class="glyphicon glyphicon-check"></span> We need to have them verify their birthdate if it is a partial signup</strong><br>
-					<br>
-					<!-- <a href="https://admin.pillpack.com/admin/users/@Customer.ClientUniqueId@" target="_blank">
-                        <button type="button" class="btn btn-primary">PillPack Admin Link</button>
-                    </a> -->
+				<!-- /DIABETES AREA -->
+				<!-- Additional Med Area -->
+				<h2><span aria-hidden="true" class="glyphicon glyphicon-th-list"></span> Additional Meds</h2>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h5 class="panel-title">Gather full Med List</h5>
+					</div>
+					<div class="panel-body">
+						<p>You mentioned earlier that you take 5 or more medications. Let&rsquo;s go ahead and add these to your PillPack as well.</p>
+						<p>What other conditions are you managing?</p>
+						<p>Now let&rsquo;s collect the rest of your medications that you take so that your dedicated PillPack pharmacist can transfer those from your pharmacy and start building your all-inclusive PillPack.</p>
+					</div>
 				</div>
 				<hr>
-<!-- /PARTIAL LEADS INFO VERIFICATION -->
-				
-<!-- Close Script -->			
-				<h2>Close Script</h2>
-				<p>Just a reminder, there is no additional charge for our service, the only thing you need to cover are your copays. How do you usually pay for those? What card do you want to put on file for your copays?</p>
+				<!-- /Additional Med Area -->
+				<!-- Close Script -->
+				<h2><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> Close Script</h2>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h5 class="panel-title">Reminder that there is no cost for 4 or more scripts</h5>
+					</div>
+					<div class="panel-body">
+						<p>Just a reminder, there is no additional charge for our service, the only thing you need to cover are your copays. How do you usually pay for those? What card do you want to put on file for your copays?</p>
+					</div>
+				</div>
 				<hr>
 				<!-- Start Manditory Recap -->
-				<h2>Mandatory Recap</h2>
+				<h2><span aria-hidden="true" class="glyphicon glyphicon-book"></span> Mandatory Recap</h2>
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h3 class="panel-title"><span aria-hidden="true" class="glyphicon glyphicon-alert"></span> This needs to be read word for word.</h3>
@@ -414,12 +471,11 @@
 						<ul>
 							<li>We have assigned a pharmacy team to you and they will transfer your medications over to PillPack Pharmacy and get any necessary refills.</li>
 							<li>That process usually takes about 2 weeks, depending on how quickly we can get this information from your doctor(s) and pharmacy(s).</li>
-						</ul>
-						<!-- Start Refill -->
+						</ul><!-- Start Refill -->
 						<div class="panel-group">
 							<div class="panel panel-warning">
 								<div class="panel-heading">
-									<h4 class="panel-title">Refill Information</h4>
+									<h5 class="panel-title">Refill Information</h5>
 									<div>
 										This must be read if it has not already been discussed.
 									</div>
@@ -432,16 +488,12 @@
 									</ul>
 								</div>
 							</div>
-						</div>
-						<!-- End Refill -->
+						</div><!-- End Refill -->
 						<p>By now you've received an email welcoming you to PillPack. In this email you will find a "Create My Password Now" button. We need you to click this button to verify that you're receiving your emails from PillPack and to set up your secure password. Do you have time to do that now? Last thing we need you to do is call your doctor's office and tell them to change your preferred pharmacy to PillPack and authorizing us to manage your refills.</p>
 						<p>If there are any questions during the process myself or someone from the Pharmacy Team will contact you. If you have any questions please do not hesitate to contact us through the information listed on the email.</p>
 						<h1>CONGRATULATIONS AND WELCOME TO PILLPACK!</h1>
 					</div>
-				</div>
-<!-- /Close Script -->
-				
-				
+				</div><!-- /Close Script -->
 			</div>
 		</div>
 	</div><!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

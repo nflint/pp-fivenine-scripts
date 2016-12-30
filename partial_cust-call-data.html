@@ -1,0 +1,69 @@
+					<div>
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li class="active" role="presentation">
+								<a aria-controls="home" data-toggle="tab" href="#customer_details" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-earphone"></span> Customer Details</a>
+							</li>
+							<li role="presentation">
+								<a aria-controls="profile" data-toggle="tab" href="#call_details" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-cog"></span> Call Details</a>
+							</li>
+							<li role="presentation">
+								<a aria-controls="profile" data-toggle="tab" href="#campaign_info" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-education"></span> Campaign Info</a>
+							</li>
+						</ul><!-- Tab panes -->
+						<div class="tab-content">
+							<div class="tab-pane active" id="customer_details" role="tabpanel">
+								<div class="well">
+									<h5><span class="text-danger">Hold Time: @Call.hold_time@</span></h5>
+									<table class="table table-striped">
+										<tr>
+											<th scope="row">Customer Name</th>
+											<td>@Customer.first_name@ @Customer.last_name@</td>
+											<th scope="row">CID</th>
+											<td>@Customer.ClientUniqueId@</td>
+										</tr>
+										<tr>
+											<th scope="row">Address</th>
+											<td>@Customer.street@</td>
+											<th scope="row">City</th>
+											<td>@Customer.city@</td>
+										</tr>
+										<tr>
+											<th scope="row">State</th>
+											<td>@Customer.state@</td>
+											<th scope="row">Zip</th>
+											<td>@Customer.zip@</td>
+										</tr>
+										<tr>
+											<td></td>
+										</tr>
+									</table>
+									<h4>Comments</h4>@Call.comments@
+								</div>
+							</div>
+							<div class="tab-pane" id="call_details" role="tabpanel">
+								<div class="well">
+									<table class="table table-striped">
+										<tr>
+											<th scope="row">Disposition</th>
+											<td>@Call.disposition_name@</td>
+											<th scope="row">Attempts</th>
+											<td>@customer.Attempts@</td>
+										</tr>
+										<tr>
+											<th scope="row">Campaign</th>
+											<td>@Call.campaign_name@</td>
+											<th scope="row">Type</th>
+											<td>@Call.type@</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div class="tab-pane" id="campaign_info" role="tabpanel">
+								<div class="well">
+									<p>This area contains a quick overview of the campaign. In PillPack’s specific path- Byte is purchasing raw verified data from TV Response Group, warming it up in their off-shore call center, and then transferring the lead into PPAC as a warm transfer inbound call.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
