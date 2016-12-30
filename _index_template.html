@@ -61,29 +61,50 @@
 			<div class="col-md-12">
 				<h4 class=""><span aria-hidden="true" class="glyphicon glyphicon-user"></span> @Agent.full_name@ / @customer.OfficeID@</h4>
 				<hr>
-				<!-- ALERT AREA -->
+
+<!-- Alert Ares (partial_alert)-->
 				<div class="alert alert-danger" role="alert">
 					<strong><span aria-hidden="true" class="glyphicon glyphicon-warning-sign"></span> Campaign Alert:</strong><br>
 					NEEED INFORMATION
-				</div><!-- /ALERT AREA -->
+				</div>
+<!-- /Alert Area -->
+
 				<div>
 
-<!-- Customer and Call Detail Tabs (partial_cust-call-data.html)-->
+<!-- Customer and Call Detail Tabs (partial_cust-call-data)-->
 					<div>
 						<!-- Nav tabs -->
 						<ul class="nav nav-tabs" role="tablist">
 							<li class="active" role="presentation">
-								<a aria-controls="home" data-toggle="tab" href="#customer_details" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-earphone"></span> Customer Details</a>
+								<a aria-controls="home" data-toggle="tab" href="#call_details" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-cog"></span> Call Details</a>
 							</li>
 							<li role="presentation">
-								<a aria-controls="profile" data-toggle="tab" href="#call_details" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-cog"></span> Call Details</a>
+								<a aria-controls="profile" data-toggle="tab" href="#customer_details" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-earphone"></span> Customer Details</a>
 							</li>
 							<li role="presentation">
 								<a aria-controls="profile" data-toggle="tab" href="#campaign_info" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-education"></span> Campaign Info</a>
 							</li>
 						</ul><!-- Tab panes -->
 						<div class="tab-content">
-							<div class="tab-pane active" id="customer_details" role="tabpanel">
+							<div class="tab-pane active" id="call_details" role="tabpanel">
+								<div class="well">
+									<table class="table table-striped">
+										<tr>
+											<th scope="row">Disposition</th>
+											<td>@Call.disposition_name@</td>
+											<th scope="row">Attempts</th>
+											<td>@customer.Attempts@</td>
+										</tr>
+										<tr>
+											<th scope="row">Campaign</th>
+											<td>@Call.campaign_name@</td>
+											<th scope="row">Type</th>
+											<td>@Call.type@</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div class="tab-pane" id="customer_details" role="tabpanel">
 								<div class="well">
 									<h5><span class="text-danger">Hold Time: @Call.hold_time@</span></h5>
 									<table class="table table-striped">
@@ -112,24 +133,6 @@
 									<h4>Comments</h4>@Call.comments@
 								</div>
 							</div>
-							<div class="tab-pane" id="call_details" role="tabpanel">
-								<div class="well">
-									<table class="table table-striped">
-										<tr>
-											<th scope="row">Disposition</th>
-											<td>@Call.disposition_name@</td>
-											<th scope="row">Attempts</th>
-											<td>@customer.Attempts@</td>
-										</tr>
-										<tr>
-											<th scope="row">Campaign</th>
-											<td>@Call.campaign_name@</td>
-											<th scope="row">Type</th>
-											<td>@Call.type@</td>
-										</tr>
-									</table>
-								</div>
-							</div>
 							<div class="tab-pane" id="campaign_info" role="tabpanel">
 								<div class="well">
 									<p>This area contains a quick overview of the campaign. In PillPack’s specific path- Byte is purchasing raw verified data from TV Response Group, warming it up in their off-shore call center, and then transferring the lead into PPAC as a warm transfer inbound call.</p>
@@ -140,7 +143,7 @@
 					<hr>
 <!-- /Customer and Call Detail Tabs -->
 
-<!-- Intro (partial_intro.html)-->
+<!-- Intro (partial_intro)-->
 					<h2><span aria-hidden="true" class="glyphicon glyphicon-earphone"></span> Intro</h2>
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -154,7 +157,7 @@
 					</div>
 <!-- /Intro -->
 					
-<!-- General Help Info (partial_general-info.html)-->
+<!-- General Help Info (partial_general-info)-->
 					<ul class="list list-unstyled list-inline"
 						<!-- Sales Blast Modal -->
 						<li>
@@ -227,8 +230,26 @@
 					</ul> <br>
 					<hr>
 <!-- /General Help Info -->
+
+<!-- Special Offer (partial_special-offer)-->
+					<h2><span aria-hidden="true" class="glyphicon glyphicon-star"></span> Special Offer</h2>
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h5 class="panel-title">Coupon Med Count Verification</h5>
+							</div>
+							<div class="panel-body">
+								<p>I understand that you currently take 5 or more medications, is that correct?</p>
+								<ul>
+									<li><strong>If YES</strong> - We can offer you a $25 coupon for any OTCs that you would like to add.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<hr>
+<!-- /Special Offer -->
 					
-<!-- Qualification & Verification Area -->
+<!-- Qualification & Verification Area (partial_qualification-verification) -->
 					<h2><span aria-hidden="true" class="glyphicon glyphicon-check"></span> Qualification & Verification</h2>
 					<div class="panel-group">
 						<div class="panel panel-default">
@@ -288,7 +309,7 @@
 					<hr>
 <!-- /Qualification & Verification Area -->
 
-<!-- Diabetes Area (partial_diabetes.html)-->
+<!-- Diabetes Area (partial_diabetes)-->
 					<button aria-controls="collapseDiabetesDetails" aria-expanded="false" class="btn btn-link" data-target="#collapseDiabetesDetails" data-toggle="collapse" type="button">
 					<h2><span aria-hidden="true" class="glyphicon glyphicon-plus-sign"></span> Diabetes Section</h2>Show/Hide Diabetes Details</button><br>
 					<br>
@@ -455,7 +476,7 @@
 				<hr>
 <!-- /DIABETES AREA -->
 
-<!-- Additional Med Area (partial_additional-med.html)-->
+<!-- Additional Med Area (partial_additional-med)-->
 				<h2><span aria-hidden="true" class="glyphicon glyphicon-th-list"></span> Additional Meds</h2>
 				<div class="panel panel-default">
 					<div class="panel-heading">
@@ -470,11 +491,11 @@
 				<hr>
 <!-- /Additional Med Area -->
 
-<!-- Close Script (partial_close-script.html)-->
+<!-- Close Script (partial_close-script)-->
 				<h2><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> Close Script</h2>
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h5 class="panel-title">Reminder that there is no cost for 4 or more scripts</h5>
+						<h5 class="panel-title">No Cost & Copay Reminder</h5>
 					</div>
 					<div class="panel-body">
 						<p>Just a reminder, there is no additional charge for our service, the only thing you need to cover are your copays. How do you usually pay for those? What card do you want to put on file for your copays?</p>
@@ -483,7 +504,7 @@
 				<hr>
 <!-- /Close Script -->
 				
-<!-- Manditory Recap (partial_recap.html)-->
+<!-- Manditory Recap (partial_recap)-->
 				<h2><span aria-hidden="true" class="glyphicon glyphicon-book"></span> Mandatory Recap</h2>
 				<div class="panel panel-default">
 					<div class="panel-heading">
