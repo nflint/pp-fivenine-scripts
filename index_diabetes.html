@@ -42,7 +42,8 @@
 	</style>
 </head>
 <body>
-	<!-- START Nav -->
+
+<!-- START Nav -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -51,12 +52,13 @@
 			</div>
 			<div class="navbar-collapse collapse" id="navbar"></div><!--/.navbar-collapse -->
 		</div>
-	</nav><!-- END Nav -->
+	</nav>
+<!-- END Nav -->
+
 	<div class="container">
 		<div class="row">
 			<!-- Start Right Column -->
 			<div class="col-md-12">
-				<!-- Main Intro -->
 				<h4 class=""><span aria-hidden="true" class="glyphicon glyphicon-user"></span> @Agent.full_name@ / @customer.OfficeID@</h4>
 				<hr>
 				<!-- ALERT AREA -->
@@ -65,7 +67,8 @@
 					NEEED INFORMATION
 				</div><!-- /ALERT AREA -->
 				<div>
-					<!-- Start Customer and Call Detail Tabs -->
+
+<!-- Customer and Call Detail Tabs (partial_cust-call-data.html)-->
 					<div>
 						<!-- Nav tabs -->
 						<ul class="nav nav-tabs" role="tablist">
@@ -135,8 +138,9 @@
 						</div>
 					</div>
 					<hr>
-					<!-- End Customer and Call Detail Tabs -->
-					<!-- INTRO AREA -->
+<!-- /Customer and Call Detail Tabs -->
+
+<!-- Intro (partial_intro.html)-->
 					<h2><span aria-hidden="true" class="glyphicon glyphicon-earphone"></span> Intro</h2>
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -147,8 +151,10 @@
 							<p>(Partner transfer)</p>
 							<p>Hi, <strong>@Customer.first_name@ @Customer.last_name@</strong>. Again my name is <strong>@Agent.full_name@</strong>, I am an advisor with PillPack Pharmacy and I will be helping you simplify the way you manage your health.</p><br>
 						</div>
-					</div><!-- /INTRO AREA -->
-					<!-- General Help Info -->
+					</div>
+<!-- /Intro -->
+					
+<!-- General Help Info (partial_general-info.html)-->
 					<div class="row">
 						<!-- Sales Blast Modal -->
 						<div class="col-xs-3">
@@ -170,7 +176,9 @@
 									</div>
 								</div>
 							</div>
-						</div><!-- /Low Interest Rebuttal Modal -->
+						</div>
+						<!-- /Sales Blast Modal -->
+						
 						<!-- Low Interest Rebuttal Modal -->
 						<div class="col-xs-3">
 							<!-- Button trigger modal -->
@@ -191,7 +199,9 @@
 									</div>
 								</div>
 							</div>
-						</div><!-- /Low Interest Rebuttal Modal -->
+						</div>
+						<!-- /Low Interest Rebuttal Modal -->
+						
 						<!-- Detailed Rebuttal Modal -->
 						<div class="col-xs-3">
 							<!-- Button trigger modal -->
@@ -212,12 +222,13 @@
 									</div>
 								</div>
 							</div>
-						</div><!-- /Detailed Rebuttal Modal -->
+						</div>
+						<!-- /Detailed Rebuttal Modal -->
 					</div><br>
 					<hr>
-					<!-- /General Help Info -->
-					<!-- /INTRO AREA -->
-					<!-- ualification & Verification Area -->
+<!-- /General Help Info -->
+					
+<!-- Qualification & Verification Area -->
 					<h2><span aria-hidden="true" class="glyphicon glyphicon-check"></span> Qualification & Verification</h2>
 					<div class="panel-group">
 						<div class="panel panel-default">
@@ -275,14 +286,17 @@
                                 </a> -->
 					</div>
 					<hr>
-					<!-- /Qualification & Verification Area -->
-					<!-- DIABETES AREA -->
+<!-- /Qualification & Verification Area -->
+
+<!-- Diabetes Area (partial_diabetes.html)-->
 					<button aria-controls="collapseDiabetesDetails" aria-expanded="false" class="btn btn-link" data-target="#collapseDiabetesDetails" data-toggle="collapse" type="button">
 					<h2><span aria-hidden="true" class="glyphicon glyphicon-plus-sign"></span> Diabetes Section</h2>Show/Hide Diabetes Details</button><br>
 					<br>
 					<div class="collapse" id="collapseDiabetesDetails">
 						<div class="row">
-							<!-- Diabetes Info --><!-- Insulin Reference Modal -->
+							
+							<!-- Diabetes Info -->
+							<!-- Insulin Reference Modal -->
 							<div class="col-xs-3">
 								<!-- Button trigger modal -->
 								<button class="btn btn-primary center-block" data-target="#myModal" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Insulin Reference Sheets</button> <!-- Modal -->
@@ -302,7 +316,8 @@
 										</div>
 									</div>
 								</div>
-							</div><!-- /Insulin Reference Modal -->
+							</div>
+							<!-- /Insulin Reference Modal -->
 							<!-- Test Strip Copay Check Modal -->
 							<div class="col-xs-3">
 								<!-- Button trigger modal -->
@@ -323,7 +338,8 @@
 										</div>
 									</div>
 								</div>
-							</div><!-- /Test Strip Copay Check Modal -->
+							</div>
+							<!-- /Test Strip Copay Check Modal -->
 							<!-- Insulin Reference Modal -->
 							<div class="col-xs-3">
 								<!-- Button trigger modal -->
@@ -344,11 +360,13 @@
 										</div>
 									</div>
 								</div>
-							</div><!-- /Insulin Reference Modal -->
+							</div>
+							<!-- /Insulin Reference Modal -->
 						</div><br>
 						<br>
 						<!-- /Diabetes Info -->
-						 <!-- Diabetes Script -->
+						
+						<!-- Diabetes Script -->
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h5 class="panel-title">Insulin</h5>
@@ -430,12 +448,14 @@
 								</ul><br>
 								<p>The reason that we're such a great fit for people with diabetes is we recognize that a lot of people living with diabetes have additional conditions that they manage, for example high blood pressure or high cholesterol. This amounts to a lot of additional time and stress managing all their medications. We will sort and manage your medications so you can focus on staying healthy.</p>
 							</div>
-						</div><!-- /Diabetes Script -->
+						</div>
+						<!-- /Diabetes Script -->
 					</div>
 				</div>
 				<hr>
-				<!-- /DIABETES AREA -->
-				<!-- Additional Med Area -->
+<!-- /DIABETES AREA -->
+
+<!-- Additional Med Area (partial_additional-med.html)-->
 				<h2><span aria-hidden="true" class="glyphicon glyphicon-th-list"></span> Additional Meds</h2>
 				<div class="panel panel-default">
 					<div class="panel-heading">
@@ -448,8 +468,9 @@
 					</div>
 				</div>
 				<hr>
-				<!-- /Additional Med Area -->
-				<!-- Close Script -->
+<!-- /Additional Med Area -->
+
+<!-- Close Script (partial_close-script.html)-->
 				<h2><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> Close Script</h2>
 				<div class="panel panel-default">
 					<div class="panel-heading">
@@ -460,7 +481,9 @@
 					</div>
 				</div>
 				<hr>
-				<!-- Start Manditory Recap -->
+<!-- /Close Script -->
+				
+<!-- Manditory Recap (partial_recap.html)-->
 				<h2><span aria-hidden="true" class="glyphicon glyphicon-book"></span> Mandatory Recap</h2>
 				<div class="panel panel-default">
 					<div class="panel-heading">
@@ -471,7 +494,8 @@
 						<ul>
 							<li>We have assigned a pharmacy team to you and they will transfer your medications over to PillPack Pharmacy and get any necessary refills.</li>
 							<li>That process usually takes about 2 weeks, depending on how quickly we can get this information from your doctor(s) and pharmacy(s).</li>
-						</ul><!-- Start Refill -->
+						</ul>
+						<!-- Start Refill -->
 						<div class="panel-group">
 							<div class="panel panel-warning">
 								<div class="panel-heading">
@@ -488,12 +512,15 @@
 									</ul>
 								</div>
 							</div>
-						</div><!-- End Refill -->
+						</div>
+						<!-- End Refill -->
 						<p>By now you've received an email welcoming you to PillPack. In this email you will find a "Create My Password Now" button. We need you to click this button to verify that you're receiving your emails from PillPack and to set up your secure password. Do you have time to do that now? Last thing we need you to do is call your doctor's office and tell them to change your preferred pharmacy to PillPack and authorizing us to manage your refills.</p>
 						<p>If there are any questions during the process myself or someone from the Pharmacy Team will contact you. If you have any questions please do not hesitate to contact us through the information listed on the email.</p>
 						<h1>CONGRATULATIONS AND WELCOME TO PILLPACK!</h1>
 					</div>
-				</div><!-- /Close Script -->
+				</div>
+<!-- /Manditory Recap -->
+
 			</div>
 		</div>
 	</div><!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
