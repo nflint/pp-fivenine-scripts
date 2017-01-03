@@ -333,171 +333,180 @@
 <!-- /Qualification & Verification Area -->
 
 <!-- Diabetes Area (partial_diabetes)-->
-					<button aria-controls="collapseDiabetesDetails" aria-expanded="false" class="btn btn-link" data-target="#collapseDiabetesDetails" data-toggle="collapse" type="button">
-					<h2><span aria-hidden="true" class="glyphicon glyphicon-plus-sign"></span> Diabetes Section</h2>Show/Hide Diabetes Details</button><br>
+				<button aria-controls="collapseDiabetesDetails" aria-expanded="false" class="btn btn-link" data-target="#collapseDiabetesDetails" data-toggle="collapse" type="button">
+					<h2><span aria-hidden="true" class="glyphicon glyphicon-plus-sign"></span> Diabetes Testing and Medication Section</h2>Show/Hide Diabetes Details</button><br>
 					<br>
 					<div class="collapse" id="collapseDiabetesDetails">
-						<!-- Diabetes Info -->
-						
-						<ul class="list list-unstyled list-inline">
-							<!-- Insulin Reference Modal -->
-							<li>
-								<!-- Button trigger modal -->
-								<button class="btn btn-primary center-block" data-target="#myModal" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Insulin Reference Sheets</button> <!-- Modal -->
-								<div aria-labelledby="myModalLabel" class="modal fade" id="myModal" role="dialog" tabindex="-1">
-									<div class="modal-dialog modal-lg" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-												<h5 class="modal-title" id="myModalLabel">Insulin Reference Sheet</h5>
-											</div><!-- Insulin Reference is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/spreadsheets/d/1wOJQVKdbZWu5nQcQ_bmCm6q7XSE3OWt1Px9dPdiJ41Y/edit#gid=0 -->
-											<div class="modal-body">
-												<iframe frameborder="0" height="600" src="https://docs.google.com/spreadsheets/d/1wOJQVKdbZWu5nQcQ_bmCm6q7XSE3OWt1Px9dPdiJ41Y/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="zoom:0.60" width="99.6%"></iframe>
-											</div>
-											<div class="modal-footer">
-												<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<!-- /Insulin Reference Modal -->
-							<!-- Test Strip Copay Check Modal -->
-							<li>
-								<!-- Button trigger modal -->
-								<button class="btn btn-primary center-block" data-target="#TestStrip" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Checking a Copay for Test Strips</button> <!-- Modal -->
-								<div aria-labelledby="TestStripLabel" class="modal fade" id="TestStrip" role="dialog" tabindex="-1">
-									<div class="modal-dialog modal-lg" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-												<h5 class="modal-title" id="TestStripLabel">Checking a Copay for Test Strips</h5>
-											</div><!-- Checking a Copay for Test Strips is an Iframe of the Publish to Web Version of this doc: NEED LINK -->
-											<div class="modal-body">
-												<iframe frameborder="0" height="600" src="https://docs.google.com/spreadsheets/d/1gp58wukz8kfCPjY_H2fwH1FqH540jiiAj99YOMsAxrI/pubhtml" style="zoom:0.60" width="99.6%"></iframe>
-											</div>
-											<div class="modal-footer">
-												<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<!-- /Test Strip Copay Check Modal -->
-							<!-- Insulin Reference Modal -->
-							<li>
-								<!-- Button trigger modal -->
-								<button class="btn btn-primary center-block" data-target="#GeneralInfo" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> General Diabetes Info</button> <!-- Modal -->
-								<div aria-labelledby="GeneralInfoLabel" class="modal fade" id="GeneralInfo" role="dialog" tabindex="-1">
-									<div class="modal-dialog modal-lg" role="document">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-												<h5 class="modal-title" id="GeneralInfoLabel">General Diabetes Info</h5>
-											</div><!-- General Diabetes Info is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/document/d/1MWK0_HPqoQ0xOefHV_GdxqhWoH1eYozhU8TaAI7xYFw/edit -->
-											<div class="modal-body">
-												<iframe frameborder="0" height="600" src="https://docs.google.com/document/d/1MWK0_HPqoQ0xOefHV_GdxqhWoH1eYozhU8TaAI7xYFw/pub?embedded=true" style="zoom:0.60" width="99.6%"></iframe>
-											</div>
-											<div class="modal-footer">
-												<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<!-- /Insulin Reference Modal -->
-						</ul><br>
-						<br>
-						<!-- /Diabetes Info -->
-						
-						<!-- Diabetes Script -->
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h5 class="panel-title">Insulin</h5>
-							</div>
-							<div class="panel-body">
-								<p>Let's start with your diabetes medications, do you currently use insulin?</p>
-								<ul>
-									<li><strong>If Yes</strong> - What's the name of it?</li>
-									<li>And do you use the vial or the pen?</li>
-									<li style="list-style: none; display: inline">
-										<ul>
-											<li><strong>If vial</strong> - Do you have a prescription for insulin syringes to inject it?</li>
-											<li style="list-style: none; display: inline">
-												<ul>
-													<li><strong>If Yes</strong> - Great, which pharmacy should we transfer that from?</li>
-													<li><strong>If No</strong> - We can contact your doctor for a prescription so that we can send the syringes to you with your insulin. Would you like us to do that for you? (You can also tell them that they are usually covered by insurance if they are hesitant)</li>
-													<li style="list-style: none; display: inline">
-														<ul>
-															<li><strong>If Yes</strong> - (Collect the doctor's name and contact number and ask if they have a preference of needle size that we should request.)</li>
-														</ul>
-													</li>
-												</ul>
-											</li>
-											<li><strong>If Pen</strong> - (They should have an rx for this- add this to the med list and confirm where it is filled.)</li>
-										</ul>
-									</li>
-									<li>Do you fill your insulin at XXX pharmacy as well?</li>
-								</ul>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h5 class="panel-title">Blood Sugar Testing</h5>
-							</div>
-							<div class="panel-body">
-								<p>Do you test your blood sugar? How many times a day do you test?</p>
-								<ul>
-									<li><strong>If Yes</strong> - What kind of meter and test strips do you use?</li>
-									<li style="list-style: none; display: inline">
-										<ul>
-											<li>Which pharmacy can we transfer this prescription from?</li>
-											<li>Do you have a prescription for lancets at XXX pharmacy also? (ask if they have a preference of needle size that we should request.)</li>
-											<li style="list-style: none; display: inline">
-												<ul>
-													<li><strong>If Yes</strong> - (Add lancets to the med list.)</li>
-													<li><strong>If No</strong> - (Offer to obtain prescription and collect MD info.)</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h5 class="panel-title">Alcohol Swabs: If they DO NOT use insulin and/or test their blood sugar then skip.</h5>
-							</div>
-							<div class="panel-body">
-								<p>Do you have a prescription for alcohol swabs at your current pharmacy?</p>
-								<ul>
-									<li><strong>If Yes</strong> - (Add it to the med list.)</li>
-									<li><strong>If No</strong> - Would you like us to send you alcohol swabs in your shipments so you have everything you need in one place?</li>
-									<li style="list-style: none; display: inline">
-										<ul>
-											<li><strong>If Yes</strong> - (Add it to the med list. We will try and bill it to their insurance, whether or not the insurance will cover it and what the copay would be is up to their insurance company.)</li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h5 class="panel-title">Other Diabetes Meds & Transition</h5>
-							</div>
-							<div class="panel-body">
-								<p>Do you take any oral medications for your diabetes?</p>
-								<ul>
-									<li>(Obtain medication list including strength and how many times per day, dose times if they have a preference, and pharmacy to transfer those prescriptions from.)</li>
-								</ul><br>
-								<p>The reason that we're such a great fit for people with diabetes is we recognize that a lot of people living with diabetes have additional conditions that they manage, for example high blood pressure or high cholesterol. This amounts to a lot of additional time and stress managing all their medications. We will sort and manage your medications so you can focus on staying healthy.</p>
-							</div>
-						</div>
-						<!-- /Diabetes Script -->
-					</div>
-				</div>
-				<hr>
-<!-- /DIABETES AREA -->
+					
+					<!-- Diabetes Info -->
+                    <ul class="list list-unstyled list-inline">
+                        <!-- Insulin Reference Modal -->
+                        <li>
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-primary center-block" data-target="#myModal" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Insulin Reference Sheets</button>
+                            <!-- Modal -->
+                            <div aria-labelledby="myModalLabel" class="modal fade" id="myModal" role="dialog" tabindex="-1">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                                            <h5 class="modal-title" id="myModalLabel">Insulin Reference Sheet</h5>
+                                        </div>
+                                        <!-- Insulin Reference is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/spreadsheets/d/1wOJQVKdbZWu5nQcQ_bmCm6q7XSE3OWt1Px9dPdiJ41Y/edit#gid=0 -->
+                                        <div class="modal-body">
+                                            <iframe frameborder="0" height="600" src="https://docs.google.com/spreadsheets/d/1wOJQVKdbZWu5nQcQ_bmCm6q7XSE3OWt1Px9dPdiJ41Y/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="zoom:0.60" width="99.6%"></iframe>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /Insulin Reference Modal -->
+                        <!-- Test Strip Copay Check Modal -->
+                        <li>
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-primary center-block" data-target="#TestStrip" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Checking a Copay for Test Strips</button>
+                            <!-- Modal -->
+                            <div aria-labelledby="TestStripLabel" class="modal fade" id="TestStrip" role="dialog" tabindex="-1">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                                            <h5 class="modal-title" id="TestStripLabel">Checking a Copay for Test Strips</h5>
+                                        </div>
+                                        <!-- Checking a Copay for Test Strips is an Iframe of the Publish to Web Version of this doc: NEED LINK -->
+                                        <div class="modal-body">
+                                            <iframe frameborder="0" height="600" src="https://docs.google.com/spreadsheets/d/1gp58wukz8kfCPjY_H2fwH1FqH540jiiAj99YOMsAxrI/pubhtml" style="zoom:0.60" width="99.6%"></iframe>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /Test Strip Copay Check Modal -->
+                        <!-- Insulin Reference Modal -->
+                        <li>
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-primary center-block" data-target="#GeneralInfo" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> General Diabetes Info</button>
+                            <!-- Modal -->
+                            <div aria-labelledby="GeneralInfoLabel" class="modal fade" id="GeneralInfo" role="dialog" tabindex="-1">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                                            <h5 class="modal-title" id="GeneralInfoLabel">General Diabetes Info</h5>
+                                        </div>
+                                        <!-- General Diabetes Info is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/document/d/1MWK0_HPqoQ0xOefHV_GdxqhWoH1eYozhU8TaAI7xYFw/edit -->
+                                        <div class="modal-body">
+                                            <iframe frameborder="0" height="600" src="https://docs.google.com/document/d/1MWK0_HPqoQ0xOefHV_GdxqhWoH1eYozhU8TaAI7xYFw/pub?embedded=true" style="zoom:0.60" width="99.6%"></iframe>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /Insulin Reference Modal -->
+                    </ul>
+                    <br>
+                    <br>
+                    <!-- /Diabetes Info -->
+                    <!-- Diabetes Script -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Insulin (Y/N)</h5>
+                        </div>
+                        <div class="panel-body">
+                            <p>Let's start with your diabetes medications, do you currently use any injectables to manage your diabetes?</p>
+                            <ul>
+                                <li><strong>If Yes</strong> - What's the name of it?</li>
+                                <li>And do you use the vial or the pen?</li>
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li><strong>If vial</strong> - Do you have a prescription for insulin syringes to inject it?</li>
+                                        <li style="list-style: none; display: inline">
+                                            <ul>
+                                                <li><strong>If Yes</strong> - Great, which pharmacy should we transfer that from?</li>
+                                                <li><strong>If No</strong> - We can contact your doctor for a prescription so that we can send the syringes to you with your insulin. Would you like us to do that for you? (You can also tell them that they are usually covered by insurance if they are hesitant)</li>
+                                                <li style="list-style: none; display: inline">
+                                                    <ul>
+                                                        <li><strong>If Yes</strong> - (Collect the doctor's name and contact number and ask if they have a preference of needle size that we should request.)</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>If Pen</strong> - (They should have an rx for this- add this to the med list and confirm where it is filled.)</li>
+                                    </ul>
+                                </li>
+                                <li>Do you fill your insulin at your pharmacy as well?</li>
+                            </ul>
+                             <button class="btn btn-primary center-block" data-target="#myModal" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Insulin Reference Sheets</button>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Blood Sugar Testing (Y/N)</h5>
+                        </div>
+                        <div class="panel-body">
+                            <p>Do you test your blood sugar? How many times a day do you test?</p>
+                            <ul>
+                                <li><strong>If Yes</strong> - What kind of meter and test strips do you use?</li>
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li>Which pharmacy can we transfer this prescription from?</li>
+                                        <li>Do you have a prescription for lancets at XXX pharmacy also? (ask if they have a preference of needle size that we should request.)</li>
+                                        <li style="list-style: none; display: inline">
+                                            <ul>
+                                                <li><strong>If Yes</strong> - (Add lancets to the med list.)</li>
+                                                <li><strong>If No</strong> - (Offer to obtain prescription and collect MD info.)</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary center-block" data-target="#TestStrip" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Checking a Copay for Test Strips</button>
+                        </div>
+                    </div>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Alcohol Swabs: SKIP If they DO NOT use insulin and/or test their blood sugar.</h5>
+                        </div>
+                        <div class="panel-body">
+                            <p>Do you have a prescription for alcohol swabs at your current pharmacy?</p>
+                            <ul>
+                                <li><strong>If Yes</strong> - (Add it to the med list.)</li>
+                                <li><strong>If No</strong> - Would you like us to send you alcohol swabs in your shipments so you have everything you need in one place?</li>
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li><strong>If Yes</strong> - (Add it to the med list. We will try and bill it to their insurance, whether or not the insurance will cover it and what the copay would be is up to their insurance company.)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Other Diabetes Meds & Transition?</h5>
+                        </div>
+                        <div class="panel-body">
+                            <p>Do you take any oral medications for your diabetes?</p>
+                            <ul>
+                                <li>(Obtain medication list including strength and how many times per day, dose times if they have a preference, and pharmacy to transfer those prescriptions from.)</li>
+                            </ul>
+                            <br>
+                            <p>The reason that we're such a great fit for people with diabetes is we recognize that a lot of people living with diabetes have additional conditions that they manage, for example high blood pressure or high cholesterol. This amounts to a lot of additional time and stress managing all their medications. We will sort and manage your medications so you can focus on staying healthy.</p>
+                        </div>
+                    </div>
+                    <!-- /Diabetes Script -->
+                </div>
+                <hr>
+
+<!-- /Diabetes Area -->
 
 <!-- Additional Med Area (partial_additional-med)-->
 				<h2><span aria-hidden="true" class="glyphicon glyphicon-th-list"></span> Additional Meds</h2>

@@ -75,7 +75,7 @@
                 <!-- Alert Ares (partial_alert)-->
                 <div class="alert alert-success" role="alert">
                     <strong><span aria-hidden="true" class="glyphicon glyphicon-warning-sign"></span> Campaign Notes:</strong><br>
-                    This is a <strong>General RX</strong> Warm Transfer Campaign. This script includes diabetes testing section :) ! 
+                    This is a <strong>General RX</strong> Warm Transfer Campaign. This script is for General RX but does include a diabetes testing section if it is needed :) ! 
                     <br><em></em>
                 </div>
                 <!-- /Alert Area -->
@@ -335,11 +335,30 @@
                     </div>
                     <hr>
                     <!-- /Qualification & Verification Area -->
-                    <!-- Diabetes Area (partial_diabetes)-->
-                    <h2><span aria-hidden="true" class="glyphicon glyphicon-plus-sign"></span> Diabetes Testing and Medication Section</h2>
-                    <br>
-                    <br>
-                    <!-- Diabetes Info -->
+                    
+<!-- Med Collection Area (partial_med-collection_template)-->
+				<h2><span aria-hidden="true" class="glyphicon glyphicon-th-list"></span> Prescription List Collection</h2>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h5 class="panel-title">Gather Full Med List</h5>
+					</div>
+					<div class="panel-body">
+						<p>You mentioned earlier that you take 5 or more medications. Let&rsquo;s go ahead and add these to your PillPack.</p>
+						<p>What conditions are you managing? (If diabetes is being managed, use diabetes section below)</p>
+						<p>Now let&rsquo;s collect a list of medications that you take so your dedicated PillPack pharmacist can transfer them from your pharmacy and start building your all-inclusive PillPack.</p>
+					</div>
+				</div>
+				<hr>
+<!-- /Med Collection Area -->
+
+
+<!-- Diabetes Area (partial_diabetes)-->
+				<button aria-controls="collapseDiabetesDetails" aria-expanded="false" class="btn btn-link" data-target="#collapseDiabetesDetails" data-toggle="collapse" type="button">
+					<h2><span aria-hidden="true" class="glyphicon glyphicon-plus-sign"></span> Diabetes Testing and Medication Section</h2>Show/Hide Diabetes Details</button><br>
+					<br>
+					<div class="collapse" id="collapseDiabetesDetails">
+					
+					<!-- Diabetes Info -->
                     <ul class="list list-unstyled list-inline">
                         <!-- Insulin Reference Modal -->
                         <li>
@@ -423,7 +442,7 @@
                             <h5 class="panel-title">Insulin (Y/N)</h5>
                         </div>
                         <div class="panel-body">
-                            <p>Let's start with your diabetes medications, do you currently use insulin?</p>
+                            <p>Let's start with your diabetes medications, do you currently use any injectables to manage your diabetes?</p>
                             <ul>
                                 <li><strong>If Yes</strong> - What's the name of it?</li>
                                 <li>And do you use the vial or the pen?</li>
@@ -506,21 +525,8 @@
                     <!-- /Diabetes Script -->
                 </div>
                 <hr>
-                <!-- /DIABETES AREA -->
-                <!-- Additional Med Area (partial_additional-med)-->
-                <h2><span aria-hidden="true" class="glyphicon glyphicon-th-list"></span> Additional Meds</h2>
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h5 class="panel-title">Gather full Med List</h5>
-                    </div>
-                    <div class="panel-body">
-                        <p>You mentioned earlier that you take 5 or more medications. Let&rsquo;s go ahead and add these to your PillPack as well.</p>
-                        <p>What other conditions are you managing?</p>
-                        <p>Now let&rsquo;s collect the rest of your medications that you take so that your dedicated PillPack pharmacist can transfer those from your pharmacy and start building your all-inclusive PillPack.</p>
-                    </div>
-                </div>
-                <hr>
-                <!-- /Additional Med Area -->
+
+<!-- /Diabetes Area -->
                 <!-- Close Script (partial_close-script)-->
                 <h2><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> Close Script</h2>
                 <div class="panel panel-success">
