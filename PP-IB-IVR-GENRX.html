@@ -162,9 +162,54 @@
                         <p>Hi, <strong>@Customer.first_name@ @Customer.last_name@</strong>. My name is <strong>@Agent.full_name@</strong>, I am an advisor with PillPack Pharmacy and I will be helping you simplify the way you manage your health.</p>
                         </div>
                     </div>
-                    <!-- /Intro -->
+<!-- /Intro -->
 
-                    <!-- General Help Info (partial_general-info)-->
+<!-- Special Offer (partial_special-offer)-->
+					<h2><span aria-hidden="true" class="glyphicon glyphicon-star"></span> Special Offer</h2>
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h5 class="panel-title">Coupon for 5 or more Meds</h5>
+							</div>
+							<div class="panel-body">
+								<p>Do you currently take 5 or more medications?</p>
+								<ul>
+									<li><strong>If YES</strong> - We can offer you a $25 coupon for any OTCs that you would like to add to your PillPack.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<div class="alert alert-info" role="alert">
+						<p><strong><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Coupon Information</strong></p>
+						<p>The offer code is <strong>PPCOTC25</strong>. It will add $25 of OTC credit to the customer's account.</p>
+						<p>Only 1 promo code can be added to a customer's profile, and once it's been added, it can't be removed or swapped out for another one.</p>
+					</div>
+					<hr>
+<!-- /Special Offer -->
+                    
+<!-- PillPack Pitch Area (partial_pitch-area)-->
+					<h2><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Sales Pitch</h2>
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h5 class="panel-title">General PillPack Sales Pitch</h5>
+							</div>
+							<div class="panel-body">
+							<p>Thank you. Now here’s how PillPack Pharmacy works:</p>
+    							<ul>
+									<li>We pre-sort every medication you take and organize them into individual packets.</li> 
+									<li>We print the date and time you need to take your medications right on the packet itself.</li>
+    							</ul>
+        						<p>Now, you’ll never have to sort your pills. You’ll never have to worry about missing your medication. And you’ll never have to make a trip to the pharmacy - we deliver these packets to your door every few weeks (and the shipping is free).</p>
+        						<p>You get automatic refills delivered directly to your door with free shipping. It does not include narcotics or controlled substances. <p>The best part is, <strong>YOUR COPAY SHOULD STAY THE SAME</strong>.</p>
+							</div>
+						</div>
+					</div>
+
+<!-- /PillPack Pitch Area -->
+
+<!-- General Help Info (partial_general-info)-->
                     <h4> <span aria-hidden="true" class="glyphicon glyphicon-info-sign"> </span> Rebuttal Area</h4>
                     <ul class="list list-unstyled list-inline">
                         <!-- Sales Blast Modal -->
@@ -242,99 +287,52 @@
                     </ul>
                     <br>
                     <hr>
-                    <!-- /General Help Info -->
-                    <!-- Special Offer (partial_special-offer)-->
-                    <h2><span aria-hidden="true" class="glyphicon glyphicon-star"></span> Special Offer</h2>
-                    <div class="panel-group">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h5 class="panel-title">Coupon for 5 or more Meds</h5>
-                            </div>
-                            <div class="panel-body">
-                                <p>I understand that you currently take 5 or more medications, is that correct?</p>
-                                <ul>
-                                    <li><strong>If YES</strong> - We can offer you a $25 coupon for any OTCs that you would like to add to your PillPack.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="alert alert-info" role="alert">
-                        <p><strong><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Coupon Information</strong></p>
-                        <p>The offer code is <strong>PPCOTC25</strong>. It will add $25 of OTC credit to the customer's account.</p>
-                        <p>Only 1 promo code can be added to a customer's profile, and once it's been added, it can't be removed or swapped out for another one.</p>
-                    </div>
-                    <hr>
-                    <!-- /Special Offer -->
-                    
-<!-- General RX Pitch Area (partial_gen_rx_pitch)-->
-					
+<!-- /General Help Info -->
+
+<!-- Qualification & Verification Area (partial_qualification-verification) -->
+					<h2><span aria-hidden="true" class="glyphicon glyphicon-check"></span> Qualification & Verification</h2>
+					<div class="alert alert-warning" role="alert">
+						<strong>Please Verify!</strong><br>
+						<!-- <strong><span aria-hidden="true" class="glyphicon glyphicon-check"></span> We need to verify your information</strong><br> -->
+						 <strong><span aria-hidden="true" class="glyphicon glyphicon-check"></span> We need to have them verify their birthdate if it is a partial signup</strong><br>
+						<br>
+						<!-- <a href="https://admin.pillpack.com/admin/users/@Customer.ClientUniqueId@" target="_blank">
+                                <button type="button" class="btn btn-primary">PillPack Admin Link</button>
+                                </a> -->
+					</div>
 					<div class="panel-group">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<h5 class="panel-title">General RX Pitch</h5>
+								<h5 class="panel-title">Verify information in partial and collect new info when necessary</h5>
 							</div>
 							<div class="panel-body">
-							<p>Thank you. Now here’s how PillPack Pharmacy works:</p>
-    							<ul>
-									<li>We pre-sort every medication you take and organize them into individual packets.</li> 
-									<li>We print the date and time you need to take your medications right on the packet itself.</li>
-    							</ul>
-        						<p>Now, you’ll never have to sort your pills. You’ll never have to worry about missing your medication. And you’ll never have to make a trip to the pharmacy - we deliver these packets to your door every few weeks (and the shipping is free).</p>
-        						<p>You get automatic refills delivered directly to your door with free shipping. It does not include narcotics or controlled substances. <p>The best part is, <strong>YOUR COPAY SHOULD STAY THE SAME</strong>.</p>
+								<p>To start customizing your PillPack, all we need to do is collect some basic information from you.</p>
+								<ul>
+									<li>First, can I have you verify your email for me? Thanks</li>
+									<li>Which insurance provider covers your medications? (Verify and collect insurance info)</li>
+									<li>And the address we will be shipping to is:</li>
+									<li style="list-style: none; display: inline">
+										<div style="margin-left: 2em">
+											<ul class="list list-unstyled">
+												<li>@Customer.street@</li>
+												<li>@Customer.city@</li>
+												<li>@Customer.state@</li>
+												<li>@Customer.zip@</li>
+											</ul>
+										</div>
+									</li>
+									<li>is that correct?</li>
+								</ul><br>
+								<p>As I said before, there is no additional cost for our service, the only thing you still need to cover are your copays, if you have any.</p>
+								<ul>
+									<li>What debit or credit card do you want on your account?</li>
+								</ul>
+								<p>Next, I need to collect your medication list and which pharmacies you currently use, so your PillPack pharmacist can transfer over your prescriptions and schedule your first PillPack.</p>
 							</div>
 						</div>
 					</div>
 					<hr>
-
-<!-- /General RX Area -->
-
-                    <!-- Qualification & Verification Area (partial_qualification-verification) -->
-                    <h2><span aria-hidden="true" class="glyphicon glyphicon-check"></span> Qualification & Verification</h2>
-                    <div class="panel-group">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h5 class="panel-title">Verify information in partial and collect new info when necessary</h5>
-                            </div>
-                            <div class="panel-body">
-                                <p>To start customizing your PillPack, all we need to do is collect some basic information from you.</p>
-                                <ul>
-                                    <li>First, can I have you verify your email for me? Thanks</li>
-                                    <li>Which insurance provider covers your medications? (Verify and collect insurance info)</li>
-                                    <li>And the address we will be shipping to is:</li>
-                                    <li style="list-style: none; display: inline">
-                                        <div style="margin-left: 2em">
-                                            <ul class="list list-unstyled">
-                                                <li>@Customer.street@</li>
-                                                <li>@Customer.city@</li>
-                                                <li>@Customer.state@</li>
-                                                <li>@Customer.zip@</li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>is that correct?</li>
-                                </ul>
-                                <br>
-                                <p>As I said before, there is no additional cost for our service, the only thing you still need to cover are your copays, if you have any.</p>
-                                <ul>
-                                    <li>What debit or credit card do you want on your account?</li>
-                                </ul>
-                                <p>Next, I need to collect your medication list and which pharmacies you currently use, so your PillPack pharmacist can transfer over your prescriptions and schedule your first PillPack.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="alert alert-warning" role="alert">
-                        <strong>Please Verify!</strong>
-                        <br>
-                        <!-- <strong><span aria-hidden="true" class="glyphicon glyphicon-check"></span> We need to verify your information</strong><br> -->
-                        <strong><span aria-hidden="true" class="glyphicon glyphicon-check"></span> We need to have them verify their birthdate if it is a partial signup</strong>
-                        <br>
-                        <br>
-                        <!-- <a href="https://admin.pillpack.com/admin/users/@Customer.ClientUniqueId@" target="_blank">
-                                <button type="button" class="btn btn-primary">PillPack Admin Link</button>
-                                </a> -->
-                    </div>
-                    <hr>
-                    <!-- /Qualification & Verification Area -->
+<!-- /Qualification & Verification Area -->
                     
 <!-- Med Collection Area (partial_med-collection_template)-->
 				<h2><span aria-hidden="true" class="glyphicon glyphicon-th-list"></span> Prescription List Collection</h2>
@@ -343,7 +341,6 @@
 						<h5 class="panel-title">Gather Full Med List</h5>
 					</div>
 					<div class="panel-body">
-						<p>You mentioned earlier that you take 5 or more medications. Let&rsquo;s go ahead and add these to your PillPack.</p>
 						<p>What conditions are you managing? (If diabetes is being managed, use diabetes section below)</p>
 						<p>Now let&rsquo;s collect a list of medications that you take so your dedicated PillPack pharmacist can transfer them from your pharmacy and start building your all-inclusive PillPack.</p>
 					</div>
