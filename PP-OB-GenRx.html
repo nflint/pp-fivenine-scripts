@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- TEST THE TITLE TAG -->
+    <title>Pill Pack Script-</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    
+    body {
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+    
+    .navbar {
+        color: white;
+    }
+    
+    .left-col {
+        background-color: #dedede!important;
+    }
+    
+    .table {
+        background-color: #fff;
+        !important;
+    }
+    
+    .navbar-inverse {
+        //background-color: #169fda!important;
+        //background-image: linear-gradient(to bottom,#169fda 0,#169fda 100%);
+    }
+    
+    hr {
+        margin-top: 30px!important;
+        margin-bottom: 40px!important;
+        border: 0!important;
+        border-top: 1px solid #000!important;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- START Nav -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+                <h1><span aria-hidden="true" class="glyphicon glyphicon-import"></span> PillPack: @Call.campaign_name@</h1>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar"></div>
+            <!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- END Nav -->
+    <div class="container">
+        <div class="row">
+            <!-- Start Right Column -->
+            <div class="col-md-12">
+                <h4 class=""><span aria-hidden="true" class="glyphicon glyphicon-user"></span> @Agent.full_name@ / @Agent.user_name@</h4>
+                <hr>
+
+<!-- Alert Ares (partial_alert_trg_diab)-->
+                <div class="alert alert-success" role="alert">
+                    <strong><span aria-hidden="true" class="glyphicon glyphicon-warning-sign"></span> Campaign Notes:</strong><br>
+                    This is a General RX Outbound Lead. 
+                    <br><em></em>
+                </div>
+<!-- /Alert Area -->
+
+                <div>
+                    <!-- Customer and Call Detail Tabs (partial_cust-call-data)-->
+                    <div>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active" role="presentation">
+                                <a aria-controls="home" data-toggle="tab" href="#call_details" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-cog"></span> Call Details</a>
+                            </li>
+                            <li role="presentation">
+                                <a aria-controls="profile" data-toggle="tab" href="#customer_details" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-earphone"></span> Customer Details</a>
+                            </li>
+                            <li role="presentation">
+                                <a aria-controls="profile" data-toggle="tab" href="#campaign_info" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-education"></span> Campaign Info</a>
+                            </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="call_details" role="tabpanel">
+                                <div class="well">
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th scope="row">Disposition</th>
+                                            <td>@Call.disposition_name@</td>
+                                            <th scope="row">Attempts</th>
+                                            <td>@customer.Attempts@</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Campaign</th>
+                                            <td>@Call.campaign_name@</td>
+                                            <th scope="row">Type</th>
+                                            <td>@Call.type@</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="customer_details" role="tabpanel">
+                                <div class="well">
+                                    <h5><span class="text-danger">Hold Time: @Call.hold_time@</span></h5>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th scope="row">Customer Name</th>
+                                            <td>@Customer.first_name@ @Customer.last_name@</td>
+                                            <th scope="row">CID</th>
+                                            <td>@Customer.ClientUniqueId@</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Address</th>
+                                            <td>@Customer.street@</td>
+                                            <th scope="row">City</th>
+                                            <td>@Customer.city@</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">State</th>
+                                            <td>@Customer.state@</td>
+                                            <th scope="row">Zip</th>
+                                            <td>@Customer.zip@</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                    <h4>Comments</h4>@Call.comments@
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="campaign_info" role="tabpanel">
+                                <div class="well">
+                                    <p>Outbound CoReg lead.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- /Customer and Call Detail Tabs -->
+                    
+<!-- Intro (partial_intro_trg_diab)-->
+                    <h2><span aria-hidden="true" class="glyphicon glyphicon-heart"></span> Intro</h2>
+                    <div class="panel panel-default">
+                        <!-- <div class="panel-heading">
+							<h5 class="panel-title">Call Introduction</h5>
+						</div> -->
+                        <div class="panel-body">
+<p>Hello, is this <strong>@Customer.first_name@ @Customer.last_name@</strong>? Hi, this is <strong>@Agent.full_name@</strong>, from PillPack Pharmacy on a recorded line regarding the information you requested from ZocDoc to have your medications pre-sorted and shipped directly to you.</p>
+                        
+						<p>Before we go any further, let me explain to you why so many people are switching to PillPack Pharmacy.</p>
+						<p>PillPack is a new kind of pharmacy specifically designed for people who take multiple prescription medications. What separates us from all other pharmacies is that our pharmacists synchronize your medications and ship them to you in customized dose packets, at no additional cost to you. You’ll never have to sort your pills again, and you’ll always get the right medication at the right time.</p>
+						<p>How great would that be if your current pharmacy pre-sorted and delivered your medications?</p>
+                        </div>
+                    </div>
+                    
+                                   <hr>
+<!-- /Intro -->
+                                       
+<!-- Special Offer (partial_special-offer)-->
+					<h2><span aria-hidden="true" class="glyphicon glyphicon-star"></span> Special Offer</h2>
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h5 class="panel-title">Coupon for 5 or more Meds</h5>
+							</div>
+							<div class="panel-body">
+								<p>Do you currently take 5 or more medications?</p>
+								<ul>
+									<li><strong>If YES</strong> - We can offer you a $25 coupon for any OTCs that you would like to add to your PillPack.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<div class="alert alert-info" role="alert">
+						<p><strong><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Coupon Information</strong></p>
+						<p>The offer code is <strong>PPCOTC25</strong>. It will add $25 of OTC credit to the customer's account.</p>
+						<p>Only 1 promo code can be added to a customer's profile, and once it's been added, it can't be removed or swapped out for another one.</p>
+					</div>
+					<hr>
+<!-- /Special Offer -->
+                    
+<!-- PillPack Pitch Area (partial_pitch_area_trg_diab)-->
+					<h2><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Sales Pitch</h2>
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h5 class="panel-title">Sales Pitch</h5>
+							</div>
+							<div class="panel-body">
+							<p>Next, we need to create a list of all your medications and which pharmacies you currently use. Once we’ve completed this list, a PillPack pharmacist can transfer over your prescriptions and schedule your first PillPack.
+</p>
+							</div>
+						</div>
+					</div>
+
+<!-- /PillPack Pitch Area -->
+
+<!-- General Help Info (partial_general-info)-->
+                    <h4> <span aria-hidden="true" class="glyphicon glyphicon-info-sign"> </span> Rebuttal Area</h4>
+                    <ul class="list list-unstyled list-inline">
+                        <!-- Sales Blast Modal -->
+                        <li>
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-primary center-block" data-target="#SalesBlast" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Sales Blast</button>
+                            <!-- Modal -->
+                            <div aria-labelledby="SalesBlastLabel" class="modal fade" id="SalesBlast" role="dialog" tabindex="-1">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                                            <h5 class="modal-title" id="SalesBlastLabel">Sales Blast</h5>
+                                        </div>
+                                        <!-- Sales Blast is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/document/d/1yTA2WjBKEL14BybsISjLJsi0DfP00IH1YXzrq7If7X0/edit -->
+                                        <div class="modal-body">
+                                            <iframe frameborder="0" height="600" src="https://docs.google.com/document/d/1yTA2WjBKEL14BybsISjLJsi0DfP00IH1YXzrq7If7X0/pub?embedded=true" style="zoom:0.60" width="99.6%"></iframe>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /Sales Blast Modal -->
+                        <!-- Low Interest Rebuttal Modal -->
+                        <li>
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-primary center-block" data-target="#Rebuttal" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Low Interest Rebuttal</button>
+                            <!-- Modal -->
+                            <div aria-labelledby="RebuttalLabel" class="modal fade" id="Rebuttal" role="dialog" tabindex="-1">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                                            <h5 class="modal-title" id="RebuttalLabel">Low Interest Rebuttal</h5>
+                                        </div>
+                                        <!-- Low Interest Rebuttal is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/spreadsheets/d/1OyRnIC52Qc4x_wi-UE9vAcvNVD6Q6AeTo9nt7012QP0/edit#gid=0 -->
+                                        <div class="modal-body">
+                                            <iframe frameborder="0" height="600" src="https://docs.google.com/document/d/1eEEojNRNTa7hHhlSybtLwusqTzWtvqtzFaXQ3gdclhs/pub?embedded=true" style="zoom:0.60" width="99.6%"></iframe>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /Low Interest Rebuttal Modal -->
+                        <!-- Detailed Rebuttal Modal -->
+                        <li>
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-primary center-block" data-target="#DetailedRebuttal" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Detailed Rebuttals</button>
+                            <!-- Modal -->
+                            <div aria-labelledby="DetailedRebuttalLabel" class="modal fade" id="DetailedRebuttal" role="dialog" tabindex="-1">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                                            <h5 class="modal-title" id="DetailedRebuttalLabel">Detailed Rebuttals</h5>
+                                        </div>
+                                        <!-- Detailed Rebuttals is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/spreadsheets/d/1OyRnIC52Qc4x_wi-UE9vAcvNVD6Q6AeTo9nt7012QP0/edit#gid=0 -->
+                                        <div class="modal-body">
+                                            <iframe frameborder="0" height="600" src="https://docs.google.com/a/pillpack.com/spreadsheets/d/1OyRnIC52Qc4x_wi-UE9vAcvNVD6Q6AeTo9nt7012QP0/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="zoom:0.60" width="99.6%"></iframe>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /Detailed Rebuttal Modal -->
+                    </ul>
+                    <br>
+                    <hr>
+<!-- /General Help Info -->
+
+<!-- Qualification & Verification Area (partial_qualification-verification) -->
+					<h2><span aria-hidden="true" class="glyphicon glyphicon-check"></span> Qualification & Verification</h2>
+					<div class="alert alert-warning" role="alert">
+						<strong>Please Verify!</strong><br>
+						<!-- <strong><span aria-hidden="true" class="glyphicon glyphicon-check"></span> We need to verify your information</strong><br> -->
+						 <strong><span aria-hidden="true" class="glyphicon glyphicon-check"></span> We need to have them verify their birthdate if it is a partial signup</strong><br>
+						<br>
+						<!-- <a href="https://admin.pillpack.com/admin/users/@Customer.ClientUniqueId@" target="_blank">
+                                <button type="button" class="btn btn-primary">PillPack Admin Link</button>
+                                </a> -->
+					</div>
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h5 class="panel-title">Verify information in partial and collect new info when necessary</h5>
+							</div>
+							<div class="panel-body">
+								<p>To start customizing your PillPack, all we need to do is collect some basic information from you.</p>
+								<ul>
+									<li>First, can I have you verify your email for me? Thanks</li>
+									<li>Which insurance provider covers your medications? (Verify and collect insurance info)</li>
+									<li>And the address we will be shipping to is:</li>
+									<li style="list-style: none; display: inline">
+										<div style="margin-left: 2em">
+											<ul class="list list-unstyled">
+												<li>@Customer.street@</li>
+												<li>@Customer.city@</li>
+												<li>@Customer.state@</li>
+												<li>@Customer.zip@</li>
+											</ul>
+										</div>
+									</li>
+									<li>is that correct?</li>
+								</ul><br>
+								<p>As I said before, there is no additional cost for our service, the only thing you still need to cover are your copays, if you have any.</p>
+								<ul>
+									<li>What debit or credit card do you want on your account?</li>
+								</ul>
+								<p>Next, I need to collect your medication list and which pharmacies you currently use, so your PillPack pharmacist can transfer over your prescriptions and schedule your first PillPack.</p>
+							</div>
+						</div>
+					</div>
+					<hr>
+<!-- /Qualification & Verification Area -->
+
+<!-- Diabetes Area (partial_diabetes)-->
+                    <h2><span aria-hidden="true" class="glyphicon glyphicon-plus-sign"></span> Diabetes Testing and Medication Section</h2>
+                    <br>
+                    <br>
+                    <!-- Diabetes Info -->
+                    <ul class="list list-unstyled list-inline">
+                        <!-- Insulin Reference Modal -->
+                        <li>
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-primary center-block" data-target="#myModal" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Insulin Reference Sheets</button>
+                            <!-- Modal -->
+                            <div aria-labelledby="myModalLabel" class="modal fade" id="myModal" role="dialog" tabindex="-1">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                                            <h5 class="modal-title" id="myModalLabel">Insulin Reference Sheet</h5>
+                                        </div>
+                                        <!-- Insulin Reference is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/spreadsheets/d/1wOJQVKdbZWu5nQcQ_bmCm6q7XSE3OWt1Px9dPdiJ41Y/edit#gid=0 -->
+                                        <div class="modal-body">
+                                            <iframe frameborder="0" height="600" src="https://docs.google.com/spreadsheets/d/1wOJQVKdbZWu5nQcQ_bmCm6q7XSE3OWt1Px9dPdiJ41Y/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="zoom:0.60" width="99.6%"></iframe>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /Insulin Reference Modal -->
+                        <!-- Test Strip Copay Check Modal -->
+                        <li>
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-primary center-block" data-target="#TestStrip" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Checking a Copay for Test Strips</button>
+                            <!-- Modal -->
+                            <div aria-labelledby="TestStripLabel" class="modal fade" id="TestStrip" role="dialog" tabindex="-1">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                                            <h5 class="modal-title" id="TestStripLabel">Checking a Copay for Test Strips</h5>
+                                        </div>
+                                        <!-- Checking a Copay for Test Strips is an Iframe of the Publish to Web Version of this doc: NEED LINK -->
+                                        <div class="modal-body">
+                                            <iframe frameborder="0" height="600" src="https://docs.google.com/spreadsheets/d/1gp58wukz8kfCPjY_H2fwH1FqH540jiiAj99YOMsAxrI/pubhtml" style="zoom:0.60" width="99.6%"></iframe>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /Test Strip Copay Check Modal -->
+                        <!-- Insulin Reference Modal -->
+                        <li>
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-primary center-block" data-target="#GeneralInfo" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> General Diabetes Info</button>
+                            <!-- Modal -->
+                            <div aria-labelledby="GeneralInfoLabel" class="modal fade" id="GeneralInfo" role="dialog" tabindex="-1">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                                            <h5 class="modal-title" id="GeneralInfoLabel">General Diabetes Info</h5>
+                                        </div>
+                                        <!-- General Diabetes Info is an Iframe of the Publish to Web Version of this doc: https://docs.google.com/document/d/1MWK0_HPqoQ0xOefHV_GdxqhWoH1eYozhU8TaAI7xYFw/edit -->
+                                        <div class="modal-body">
+                                            <iframe frameborder="0" height="600" src="https://docs.google.com/document/d/1MWK0_HPqoQ0xOefHV_GdxqhWoH1eYozhU8TaAI7xYFw/pub?embedded=true" style="zoom:0.60" width="99.6%"></iframe>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- /Insulin Reference Modal -->
+                    </ul>
+                    <br>
+                    <br>
+                    <!-- /Diabetes Info -->
+                    <!-- Diabetes Script -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Insulin (Y/N)</h5>
+                        </div>
+                        <div class="panel-body">
+                            <p>Let's start with your diabetes medications, do you currently use any injectables to manage your diabetes?</p>
+                            <ul>
+                                <li><strong>If Yes</strong> - What's the name of it?</li>
+                                <li>And do you use the vial or the pen?</li>
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li><strong>If vial</strong> - Do you have a prescription for insulin syringes to inject it?</li>
+                                        <li style="list-style: none; display: inline">
+                                            <ul>
+                                                <li><strong>If Yes</strong> - Great, which pharmacy should we transfer that from?</li>
+                                                <li><strong>If No</strong> - We can contact your doctor for a prescription so that we can send the syringes to you with your insulin. Would you like us to do that for you? (You can also tell them that they are usually covered by insurance if they are hesitant)</li>
+                                                <li style="list-style: none; display: inline">
+                                                    <ul>
+                                                        <li><strong>If Yes</strong> - (Collect the doctor's name and contact number and ask if they have a preference of needle size that we should request.)</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>If Pen</strong> - (They should have an rx for this- add this to the med list and confirm where it is filled.)</li>
+                                    </ul>
+                                </li>
+                                <li>Do you fill your insulin at your pharmacy as well?</li>
+                            </ul>
+                             <button class="btn btn-primary center-block" data-target="#myModal" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Insulin Reference Sheets</button>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Blood Sugar Testing (Y/N)</h5>
+                        </div>
+                        <div class="panel-body">
+                            <p>Do you test your blood sugar? How many times a day do you test?</p>
+                            <ul>
+                                <li><strong>If Yes</strong> - What kind of meter and test strips do you use?</li>
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li>Which pharmacy can we transfer this prescription from?</li>
+                                        <li>Do you have a prescription for lancets at XXX pharmacy also? (ask if they have a preference of needle size that we should request.)</li>
+                                        <li style="list-style: none; display: inline">
+                                            <ul>
+                                                <li><strong>If Yes</strong> - (Add lancets to the med list.)</li>
+                                                <li><strong>If No</strong> - (Offer to obtain prescription and collect MD info.)</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary center-block" data-target="#TestStrip" data-toggle="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Checking a Copay for Test Strips</button>
+                        </div>
+                    </div>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Alcohol Swabs: SKIP If they DO NOT use insulin and/or test their blood sugar.</h5>
+                        </div>
+                        <div class="panel-body">
+                            <p>Do you have a prescription for alcohol swabs at your current pharmacy?</p>
+                            <ul>
+                                <li><strong>If Yes</strong> - (Add it to the med list.)</li>
+                                <li><strong>If No</strong> - Would you like us to send you alcohol swabs in your shipments so you have everything you need in one place?</li>
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li><strong>If Yes</strong> - (Add it to the med list. We will try and bill it to their insurance, whether or not the insurance will cover it and what the copay would be is up to their insurance company.)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Other Diabetes Meds & Transition?</h5>
+                        </div>
+                        <div class="panel-body">
+                            <p>Do you take any oral medications for your diabetes?</p>
+                            <ul>
+                                <li>(Obtain medication list including strength and how many times per day, dose times if they have a preference, and pharmacy to transfer those prescriptions from.)</li>
+                            </ul>
+                            <br>
+                            <p>The reason that we're such a great fit for people with diabetes is we recognize that a lot of people living with diabetes have additional conditions that they manage, for example high blood pressure or high cholesterol. This amounts to a lot of additional time and stress managing all their medications. We will sort and manage your medications so you can focus on staying healthy.</p>
+                        </div>
+                    </div>
+                    <!-- /Diabetes Script -->
+                </div>
+                <hr>
+<!-- /DIABETES AREA -->
+
+<!-- Additional Med Area (partial_additional-med)-->
+				<h2><span aria-hidden="true" class="glyphicon glyphicon-th-list"></span> Additional Meds</h2>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h5 class="panel-title">Gather full Med List</h5>
+					</div>
+					<div class="panel-body">
+						<p>What other conditions are you managing?</p>
+						<p>Now let&rsquo;s collect the rest of your medications that you take so that your dedicated PillPack pharmacist can transfer those from your pharmacy and start building your all-inclusive PillPack.</p>
+					</div>
+				</div>
+				<hr>
+<!-- /Additional Med Area -->
+
+<!-- Close Script (partial_close-script)-->
+                <h2><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> Close Script</h2>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">No Cost & Copay Reminder</h5>
+                    </div>
+                    <div class="panel-body">
+                        <p>Just a reminder, there is no additional charge for our service, the only thing you need to cover are your copays. How do you usually pay for those? What card do you want to put on file for your copays?</p>
+                    </div>
+                </div>
+                <hr>
+                <!-- /Close Script -->
+                <!-- Manditory Recap (partial_recap)-->
+                <h2><span aria-hidden="true" class="glyphicon glyphicon-book"></span> Mandatory Recap</h2>
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span aria-hidden="true" class="glyphicon glyphicon-alert"></span> This needs to be read word for word.</h3>
+                    </div>
+                    <div class="panel-body">
+                        <strong>So, here's what will happen now:</strong>
+                        <ul>
+                            <li>We have assigned a pharmacy team to you and they will transfer your medications over to PillPack Pharmacy and get any necessary refills.</li>
+                            <li>That process usually takes about 2 weeks, depending on how quickly we can get this information from your doctor(s) and pharmacy(s).</li>
+                        </ul>
+                        <!-- Start Refill -->
+                        <div class="panel-group">
+                            <div class="panel panel-warning">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">Refill Information</h5>
+                                    <div>
+                                        This must be read if it has not already been discussed.
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <ul>
+                                        <li>Real quick, what medications are you going to run out of within the next 2 weeks? {Find out, from the pt, the name of the medications and approx. dates they will refill}</li>
+                                        <li>We suggest you fill those one last time at your local pharmacy as we do not want you to go without medication.</li>
+                                        <li>We want to start working on your account right away, so your Pharmacist will proceed with transferring the rest of your medications to PillPack. Please call us once you have picked up a supply of ______________. That number is 855-745-5725.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Refill -->
+                        <p>By now you've received an email welcoming you to PillPack. In this email you will find a "Create My Password Now" button. We need you to click this button to verify that you're receiving your emails from PillPack and to set up your secure password. Do you have time to do that now? 
+                        </p>
+                        <p>The last thing we need you to do is call your doctor's office and tell them to change your preferred pharmacy to PillPack and authorizing us to manage your refills.</p>
+                        <p>If we have any questions during this transition process, someone from our Pharmacy Team will contact you directly.</p>
+                        <p><em>If you have any questions please do not hesitate to contact us through the information listed on the email.</em></p>
+                        <h1>CONGRATULATIONS AND WELCOME TO PILLPACK!</h1>
+                    </div>
+                </div>
+                <!-- /Manditory Recap -->
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
