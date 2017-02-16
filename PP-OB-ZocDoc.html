@@ -1,4 +1,4 @@
-<!-- PP-OB-OnHold -->
+<!-- PP-OB-ZocDoc -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,19 +55,18 @@
 </head>
 
 <body>
-<!-- START Nav -->
+    <!-- START Nav -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-                <h1><span aria-hidden="true" class="glyphicon glyphicon-export"></span> PillPack: @Call.campaign_name@</h1>
+                <h1><span aria-hidden="true" class="glyphicon glyphicon-import"></span> PillPack: @Call.campaign_name@</h1>
             </div>
             <div class="navbar-collapse collapse" id="navbar"></div>
             <!--/.navbar-collapse -->
         </div>
     </nav>
-<!-- END Nav -->
-
+    <!-- END Nav -->
     <div class="container">
         <div class="row">
             <!-- Start Right Column -->
@@ -75,17 +74,16 @@
                 <h4 class=""><span aria-hidden="true" class="glyphicon glyphicon-user"></span> @Agent.full_name@ / @Agent.user_name@</h4>
                 <hr>
 
-<!-- Alert Ares (partial_alert)-->
+<!-- Alert Ares (partial_alert_trg_diab)-->
                 <div class="alert alert-success" role="alert">
                     <strong><span aria-hidden="true" class="glyphicon glyphicon-warning-sign"></span> Campaign Notes:</strong><br>
-                    This is a <strong>Outbound</strong> Campaign with patients who have are in the OnHold Status.
+                    This is a General RX Outbound Lead. 
                     <br><em></em>
                 </div>
 <!-- /Alert Area -->
 
                 <div>
-
-<!-- Customer and Call Detail Tabs (partial_cust-call-data)-->
+                    <!-- Customer and Call Detail Tabs (partial_cust-call-data)-->
                     <div>
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
@@ -150,45 +148,32 @@
                             </div>
                             <div class="tab-pane" id="campaign_info" role="tabpanel">
                                 <div class="well">
-                                    <p>@Source@</p>
+                                    <p>Outbound CoReg lead.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <hr>
-<!-- /Customer and Call Detail Tabs -->
-
-<!-- Admin Link Area (partial_admin-link)-->
-					<div class="panel panel-success">
-							<div class="panel-heading">
-								<h5 class="panel-title">User CID</h5>
-							</div>
-							<div class="panel-body">
-								<p><strong>@customer.ClientUniqueId@</strong></p>
-							</div>
-					</div>
-<!-- /Admin Link Area -->
-
-<!-- Intro (partial_intro-ob-onhold)-->
+                    <!-- /Customer and Call Detail Tabs -->
+                    
+<!-- Intro (partial_intro_trg_diab)-->
                     <h2><span aria-hidden="true" class="glyphicon glyphicon-heart"></span> Intro</h2>
                     <div class="panel panel-default">
                         <!-- <div class="panel-heading">
 							<h5 class="panel-title">Call Introduction</h5>
 						</div> -->
                         <div class="panel-body">
-	                        <p>Hi, is this <strong>@Customer.first_name@</strong>? Hi, <strong>@Customer.first_name@</strong> this is <strong>@Agent.full_name@</strong> calling from PillPack Pharmacy on a recorded line.</p>
-							<p>I’m calling to help you better manage your medications. You signed up for PillPack a while back, to have all your medications pre-sorted and delivered directly to you. I’m calling to finish your account so that you can begin receiving your PillPack instead of having to go the pharmacy. I just need to pull up your account and verify your information.</p>
-							<p>Can you verify you last name and birthdate for me?</p>
-							<p>Thank you.</p>
-							<p>It looks like your account had an issue with <strong>@customer.Lead@</strong>.</p>
-                    
-							<p>(Once the on hold reason is resolved, continue with verifying the rest of their information)</p>
+<p>Hello, is this <strong>@Customer.first_name@ @Customer.last_name@</strong>? Hi, this is <strong>@Agent.full_name@</strong>, from PillPack Pharmacy on a recorded line regarding the information you requested from ZocDoc to have your medications pre-sorted and shipped directly to you.</p>
                         
+						<p>Before we go any further, let me explain to you why so many people are switching to PillPack Pharmacy.</p>
+						<p>PillPack is a new kind of pharmacy specifically designed for people who take multiple prescription medications. What separates us from all other pharmacies is that our pharmacists synchronize your medications and ship them to you in customized dose packets, at no additional cost to you. You’ll never have to sort your pills again, and you’ll always get the right medication at the right time.</p>
+						<p>How great would that be if your current pharmacy pre-sorted and delivered your medications?</p>
                         </div>
                     </div>
-                    <hr>
- <!-- /Intro -->                                                                    
                     
+                                   <hr>
+<!-- /Intro -->
+                                       
 <!-- Special Offer (partial_special-offer)-->
 					<h2><span aria-hidden="true" class="glyphicon glyphicon-star"></span> Special Offer</h2>
 					<div class="panel-group">
@@ -213,24 +198,20 @@
 					<hr>
 <!-- /Special Offer -->
                     
-<!-- PillPack Pitch Area (partial_pitch-area)-->
+<!-- PillPack Pitch Area (partial_pitch_area_trg_diab)-->
 					<h2><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Sales Pitch</h2>
 					<div class="panel-group">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<h5 class="panel-title">General PillPack Sales Pitch</h5>
+								<h5 class="panel-title">Sales Pitch</h5>
 							</div>
 							<div class="panel-body">
-							<p>Thank you. Now here’s how PillPack Pharmacy works:</p>
-    							<ul>
-									<li>We pre-sort every medication you take and organize them into individual packets.</li> 
-									<li>We print the date and time you need to take your medications right on the packet itself.</li>
-    							</ul>
-        						<p>Now, you’ll never have to sort your pills. You’ll never have to worry about missing your medication. And you’ll never have to make a trip to the pharmacy - we deliver these packets to your door every few weeks (and the shipping is free).</p>
-        						<p>You get automatic refills delivered directly to your door with free shipping. It does not include narcotics or controlled substances. <p>The best part is, <strong>YOUR COPAY SHOULD STAY THE SAME</strong>.</p>
+							<p>Next, we need to create a list of all your medications and which pharmacies you currently use. Once we’ve completed this list, a PillPack pharmacist can transfer over your prescriptions and schedule your first PillPack.
+</p>
 							</div>
 						</div>
 					</div>
+
 <!-- /PillPack Pitch Area -->
 
 <!-- General Help Info (partial_general-info)-->
@@ -357,23 +338,6 @@
 					</div>
 					<hr>
 <!-- /Qualification & Verification Area -->
-                    
-<!-- Med Collection Area (partial_med-collection_template)-->
-				<h2><span aria-hidden="true" class="glyphicon glyphicon-th-list"></span> Prescription List Collection</h2>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h5 class="panel-title">Gather Full Med List</h5>
-					</div>
-					<div class="panel-body">
-						<p>What conditions are you managing? (If diabetes is being managed, use diabetes section below)</p>
-						<p>Now let&rsquo;s collect a list of medications that you take so your dedicated PillPack pharmacist can transfer them from your pharmacy and start building your all-inclusive PillPack.</p>
-					</div>
-				</div>
-				<hr>
-<!-- /Med Collection Area -->
-
-
-
 
 <!-- Diabetes Area (partial_diabetes)-->
 				<button aria-controls="collapseDiabetesDetails" aria-expanded="false" class="btn btn-link" data-target="#collapseDiabetesDetails" data-toggle="collapse" type="button">
@@ -561,6 +525,20 @@
 
 <!-- /Diabetes Area -->
 
+<!-- Additional Med Area (partial_additional-med)-->
+				<h2><span aria-hidden="true" class="glyphicon glyphicon-th-list"></span> Additional Meds</h2>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h5 class="panel-title">Gather full Med List</h5>
+					</div>
+					<div class="panel-body">
+						<p>What other conditions are you managing?</p>
+						<p>Now let&rsquo;s collect the rest of your medications that you take so that your dedicated PillPack pharmacist can transfer those from your pharmacy and start building your all-inclusive PillPack.</p>
+					</div>
+				</div>
+				<hr>
+<!-- /Additional Med Area -->
+
 <!-- Close Script (partial_close-script)-->
                 <h2><span aria-hidden="true" class="glyphicon glyphicon-thumbs-up"></span> Close Script</h2>
                 <div class="panel panel-success">
@@ -612,8 +590,7 @@
                         <h1>CONGRATULATIONS AND WELCOME TO PILLPACK!</h1>
                     </div>
                 </div>
-<!-- /Manditory Recap -->
-
+                <!-- /Manditory Recap -->
             </div>
         </div>
     </div>
