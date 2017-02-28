@@ -1,0 +1,291 @@
+<!-- PP-OB-GenRx -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- TEST THE TITLE TAG -->
+    <title>Pill Pack Script-</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    
+    body {
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+    
+    .navbar {
+        color: white;
+    }
+    
+    .left-col {
+        background-color: #dedede!important;
+    }
+    
+    .table {
+        background-color: #fff;
+        !important;
+    }
+    
+    .navbar-inverse {
+        //background-color: #169fda!important;
+        //background-image: linear-gradient(to bottom,#169fda 0,#169fda 100%);
+    }
+    
+    hr {
+        margin-top: 30px!important;
+        margin-bottom: 40px!important;
+        border: 0!important;
+        border-top: 1px solid #000!important;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- START Nav -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+                <h1><span aria-hidden="true" class="glyphicon glyphicon-import"></span> PillPack: @Call.campaign_name@</h1>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar"></div>
+            <!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- END Nav -->
+    <div class="container">
+        <div class="row">
+            <!-- Start Right Column -->
+            <div class="col-md-12">
+                <h4 class=""><span aria-hidden="true" class="glyphicon glyphicon-user"></span> @Agent.full_name@ / @Agent.user_name@</h4>
+                <hr>
+
+<!-- Alert Ares (partial_alert_IVHP)-->
+                <div class="alert alert-success" role="alert">
+                    <strong><span aria-hidden="true" class="glyphicon glyphicon-warning-sign"></span> Campaign Notes:</strong><br>
+                    This is an IVHP lead. 
+                    <br><em></em>
+                </div>
+<!-- /Alert Area -->
+
+                <div>
+                    <!-- Customer and Call Detail Tabs (partial_cust-call-data)-->
+                    <div>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active" role="presentation">
+                                <a aria-controls="home" data-toggle="tab" href="#call_details" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-cog"></span> Call Details</a>
+                            </li>
+                            <li role="presentation">
+                                <a aria-controls="profile" data-toggle="tab" href="#customer_details" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-earphone"></span> Customer Details</a>
+                            </li>
+                            <li role="presentation">
+                                <a aria-controls="profile" data-toggle="tab" href="#campaign_info" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-education"></span> Campaign Info</a>
+                            </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="call_details" role="tabpanel">
+                                <div class="well">
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th scope="row">Disposition</th>
+                                            <td>@Call.disposition_name@</td>
+                                            <th scope="row">Attempts</th>
+                                            <td>@customer.Attempts@</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Campaign</th>
+                                            <td>@Call.campaign_name@</td>
+                                            <th scope="row">Type</th>
+                                            <td>@Call.type@</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="customer_details" role="tabpanel">
+                                <div class="well">
+                                    <h5><span class="text-danger">Hold Time: @Call.hold_time@</span></h5>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th scope="row">Customer Name</th>
+                                            <td>@Customer.first_name@ @Customer.last_name@</td>
+                                            <th scope="row">CID</th>
+                                            <td>@Customer.ClientUniqueId@</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Address</th>
+                                            <td>@Customer.street@</td>
+                                            <th scope="row">City</th>
+                                            <td>@Customer.city@</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">State</th>
+                                            <td>@Customer.state@</td>
+                                            <th scope="row">Zip</th>
+                                            <td>@Customer.zip@</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                    <h4>Comments</h4>@Call.comments@
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="campaign_info" role="tabpanel">
+                                <div class="well">
+                                    <p>IVHP Lead</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- /Customer and Call Detail Tabs -->
+                    
+<!-- Intro (partial_intro_ivhp)-->
+                    <h2><span aria-hidden="true" class="glyphicon glyphicon-heart"></span> Intro</h2>
+                    <div class="panel panel-default">
+                        <!-- <div class="panel-heading">
+							<h5 class="panel-title">Call Introduction</h5>
+						</div> -->
+                        <div class="panel-body">
+<p>Hi, is <strong>@Customer.first_name@ @Customer.last_name@</strong> available? Hi, this is <strong>@Agent.full_name@</strong> from PillPack on a recorded line. I'm calling regarding the information Inter Valley Health Plan sent you about your medications and getting them delivered to your door in prepackaged pill packs. PillPack is a pharmacy that has partnered with your health plan – Inter Valley Health Plan to help simplify your pharmacy experience.</p>
+
+<p>Just a reminder regarding the information Inter Valley sent to you. PillPack is a full service pharmacy that delivers your medications to your front door for free – you only need to pay your copays. Maintenance medications are delivered in pre-packaged packets with a date and a time stamp so you or your care giver will no longer have to sort your medications into a pillbox. Other medications such as diabetes supplies, inhalers and creams will also be sent but will be separate from your pill pack.</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <!-- <div class="panel-heading">
+							<h5 class="panel-title">Call Introduction</h5>
+						</div> -->
+                        <div class="panel-body">
+	                        <p>Did you have a chance to review the information Inter Valley sent?</p>
+	                        <ul>
+		                        <li><strong>If yes</strong> – Would you like to sign up to receive your medications at your home?</li>
+		                        	<ul>
+			                        	<li><strong>If yes</strong> – Great, let’s get started – move to address verification below.</li>
+			                        	<li><strong>If no</strong> – Ok, do you have questions about our service or the cost associated? </ br> Can I send you the materials via email?</li>
+			                        </ul>
+								<li><strong>If no</strong> – No problem, can I take a few minutes to provide you additional detail on our service for (Partner) members?</li>
+									<ul>	
+										<li><strong>If yes</strong> – Great, provide explanation and see if you can re-send partner materials via email.</li>
+										<li><strong>If no</strong> – Ok, if you would like to learn more at any time in the future please call us at <strong>(Partner unique phone #)</strong> or by going to <strong>(Partner unique URL).</strong></li>
+			                		</ul>
+			                </ul>
+
+                        </div>
+                    </div>
+                    
+                                   <hr>
+<!-- /Intro --> 
+
+<!-- Script Body -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+							<h5 class="panel-title">Address Verification</h5>
+						</div>
+                        <div class="panel-body">
+	                    <p>We’ve got you listed at:</p>
+	                    	<ul>
+		                    	<ul class="list-unstyled">
+		                    		<li>@Customer.street@</li>
+									<li>@Customer.city@</li>
+									<li>@Customer.state@</li>
+									<li>@Customer.zip@</li>
+	                    		</ul>
+	                    	</ul>
+						<p>Is that correct?</p>
+	                    </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+							<h5 class="panel-title">Verification</h5>
+						</div>
+                        <div class="panel-body">
+		                    <ul>
+			                    <li>Verify Demographic Info</li>
+			                    <ul><li>To ensure we have all the correct information for you.</li></ul>
+			                    <li>Verify all Allergies & Conditions.</li>
+			                    <li>Verify OTC/Vitamins.</li>
+			                    <ul><li>OTC and Vitamins can also be included inside of your PillPack.</li></ul>
+		                    </ul>
+	                    </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+	                    <p>Just a reminder, there is no additional charge for our service, the only thing you still need to cover are your copays. How do you usually pay for those?</p>
+	                    	<ul class="list-unstyled">
+								<li>(Obtain credit card information)</li>
+	                    	</ul>
+	                    <p>We’re just about done here [customer name] all we need is the names of the medications you’re taking and when you take them, so we can schedule, pre-sort, and deliver them to you. Do you have your medication list handy?</p>
+		                    <ul class="list-unstyled">
+			                    <li>(Obtain medication list)</li>
+		                    </ul>
+	                    </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+							<p>Okay, now that I have all your prescription information, the next step is for me to transfer all your information to our PillPack Onboarding Team. We will reach out to your pharmacy and pull over your active refills, so you don't need to go get new prescriptions. On average, it will be 2 to 3 weeks to get you your first PillPack, so we plan on refilling your medications as your refills become available.</p>
+	                    </div>
+                    </div>
+                    <hr>
+<!-- /Script Body -->
+
+<!-- Manditory Recap (partial_recap)-->
+                <h2><span aria-hidden="true" class="glyphicon glyphicon-book"></span> Mandatory Recap</h2>
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span aria-hidden="true" class="glyphicon glyphicon-alert"></span> This needs to be read word for word.</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>Your information has now been sent to our pharmacy team, whose sole job is to work as quickly as possible to get you setup on PillPack. During this time, we are;</p>
+                        <ul>
+                            <li>Contacting your pharmacy and doctors to transfer your medications over to PillPack and get any necessary refills.</li>
+                            <li> Preparing your first set of packets and medications to ship to you.</li>
+                        </ul>
+                        <p>By now you’ve received an email welcoming you to PillPack. Please take a moment to click the link in the email and create a password to gain access to your secure account. Through this online dashboard you will be able to:</p>
+                        <ul>
+	                        <li>Manage your medications.</li>
+	                        <li>View your copay information.</li>
+	                        <li>Stay up to date on when to expect your medications to be delivered.</li>
+                        </ul>
+                        <p>If there are any questions during the process myself or someone from the Pharmacy Team will contact you. If you have any questions please do not hesitate to contact us through the information listed on the email.</p>
+                        <h1>CONGRATULATIONS AND WELCOME TO PILLPACK!</h1>
+                    </div>
+                </div>
+<!-- /Manditory Recap -->
+
+                  
+                    
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
