@@ -1,0 +1,220 @@
+<!-- PP-OB-CustomerWinback -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- TEST THE TITLE TAG -->
+    <title>Pill Pack Script-</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    
+    body {
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+    
+    .navbar {
+        color: white;
+    }
+    
+    .left-col {
+        background-color: #dedede!important;
+    }
+    
+    .table {
+        background-color: #fff;
+        !important;
+    }
+    
+    .navbar-inverse {
+        //background-color: #169fda!important;
+        //background-image: linear-gradient(to bottom,#169fda 0,#169fda 100%);
+    }
+    
+    hr {
+        margin-top: 30px!important;
+        margin-bottom: 40px!important;
+        border: 0!important;
+        border-top: 1px solid #000!important;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- START Nav -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+                <h1><span aria-hidden="true" class="glyphicon glyphicon-import"></span> PillPack: @Call.campaign_name@</h1>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar"></div>
+            <!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- END Nav -->
+    <div class="container">
+        <div class="row">
+            <!-- Start Right Column -->
+            <div class="col-md-12">
+                <h4 class=""><span aria-hidden="true" class="glyphicon glyphicon-user"></span> @Agent.full_name@ / @Agent.user_name@</h4>
+                <hr>
+
+<!-- Alert Ares (partial_alert_trg_diab)-->
+                <div class="alert alert-success" role="alert">
+                    <strong><span aria-hidden="true" class="glyphicon glyphicon-warning-sign"></span> Campaign Notes:</strong><br>
+                    This is a Customer Win Back Call. 
+                    <br><em></em>
+                </div>
+<!-- /Alert Area -->
+
+                <div>
+                    <!-- Customer and Call Detail Tabs (partial_cust-call-data)-->
+                    <div>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active" role="presentation">
+                                <a aria-controls="home" data-toggle="tab" href="#call_details" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-cog"></span> Call Details</a>
+                            </li>
+                            <li role="presentation">
+                                <a aria-controls="profile" data-toggle="tab" href="#customer_details" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-earphone"></span> Customer Details</a>
+                            </li>
+                            <li role="presentation">
+                                <a aria-controls="profile" data-toggle="tab" href="#campaign_info" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-education"></span> Campaign Info</a>
+                            </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="call_details" role="tabpanel">
+                                <div class="well">
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th scope="row">Disposition</th>
+                                            <td>@Call.disposition_name@</td>
+                                            <th scope="row">Attempts</th>
+                                            <td>@customer.Attempts@</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Campaign</th>
+                                            <td>@Call.campaign_name@</td>
+                                            <th scope="row">Type</th>
+                                            <td>@Call.type@</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="customer_details" role="tabpanel">
+                                <div class="well">
+                                    <h5><span class="text-danger">Hold Time: @Call.hold_time@</span></h5>
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th scope="row">Customer Name</th>
+                                            <td>@Customer.first_name@ @Customer.last_name@</td>
+                                            <th scope="row">CID</th>
+                                            <td>@Customer.ClientUniqueId@</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Address</th>
+                                            <td>@Customer.street@</td>
+                                            <th scope="row">City</th>
+                                            <td>@Customer.city@</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">State</th>
+                                            <td>@Customer.state@</td>
+                                            <th scope="row">Zip</th>
+                                            <td>@Customer.zip@</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                    <h4>Comments</h4>@Call.comments@
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="campaign_info" role="tabpanel">
+                                <div class="well">
+                                    <p>Customer Win Back</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- /Customer and Call Detail Tabs -->
+                    
+<!-- Script Body -->
+
+ <div class="panel panel-default">
+                        <!-- <div class="panel-heading">
+							<h5 class="panel-title">Call Introduction</h5>
+						</div> -->
+                        <div class="panel-body">
+	                        
+	                        <p>Hello, is <strong>@Customer.first_name@ @Customer.last_name@</strong> available? Hi, <strong>@Customer.first_name@</strong>, this is <strong>@Agent.full_name@</strong> calling from PillPack Pharmacy. How are you today?</p>
+
+<p>I’m calling as a follow up to your request to pause your PillPack deliveries because you had too many medications on hand. It looks like you paused your shipments on [Pause Date], is that right? At PillPack we pride ourselves in creating the best pharmacy experience possible for our customers. So, we want to make sure that you are taken care of and that we can help you better manage your medications.</p>
+
+<p>Outside of having enough medications on hand, is there any other reason why you paused your account?</p>
+ 
+<p>If we can solve ___________________, would you like us to start your PillPack service again?</p>
+
+<p>While I have you on the phone, what was the best part about using PillPack?</p>
+
+<p>What can we do to create a better experience for customers like yourself?</p>
+
+
+
+<h4>Thank you for taking the time to speak with me and have a nice day.</h4>
+                        </div>
+ </div>
+ 
+ <div class="panel-group">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">Winback Form URL</h5>
+                                </div>
+                                <div class="panel-body">
+                                   <p>https://docs.google.com/a/pillpack.com/forms/d/1ELkq6Mc-QJdhqOEf3MVN7_2dFoBGHW090k6DTlJosl8/edit</p>
+                                </div>
+                            </div>
+                        </div>
+
+<hr>
+<br>
+<h4>How to win back churned customers:</h4>
+<ol>
+	<li>Find out exactly why they left. If they are a customer that you want back, find out exactly why they left. If they say price then you know there is disconnect between what you offer and the value they perceive. No matter what the reason, ask at least two more probing questions to find out exactly what you could do to improve the offer. You may not get them back, but you will have information that you can use to save a customer who may be thinking of leaving.</li>
+	<li>Adjust your offer. Your lost customer research might uncover some information that you can use to create a new and more profitable offer for your customers. Document your existing offer and the price paid for that offer, then collect other offer and price combinations.</li>
+	<li>Take responsibility. If you made a mistake to lose them ask them what they would need to have to make them stay. That means that you fix what went wrong with no requirement for them to remain as a customer. They may still choose to leave, but if they have a great last experience with you, they may refer you to friends and family who may be a better fit as a customer.</li>
+	<li>Ask for permission to send them information or reinstate service. Create a marketing list that is for special prospects and past customers. This list should be used to send information and education on industry topics that they are interested.</li>
+</ol>
+
+
+<!-- /Script Body -->
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
