@@ -83,79 +83,7 @@
 <!-- /Alert Area -->
 
                 <div>
-                    <!-- Customer and Call Detail Tabs (partial_cust-call-data)-->
-                    <div>
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li class="active" role="presentation">
-                                <a aria-controls="home" data-toggle="tab" href="#call_details" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-cog"></span> Call Details</a>
-                            </li>
-                            <li role="presentation">
-                                <a aria-controls="profile" data-toggle="tab" href="#customer_details" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-earphone"></span> Customer Details</a>
-                            </li>
-                            <li role="presentation">
-                                <a aria-controls="profile" data-toggle="tab" href="#campaign_info" role="tab"><span aria-hidden="true" class="glyphicon glyphicon-education"></span> Campaign Info</a>
-                            </li>
-                        </ul>
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="call_details" role="tabpanel">
-                                <div class="well">
-                                    <table class="table table-striped">
-                                        <tr>
-                                            <th scope="row">Disposition</th>
-                                            <td>@Call.disposition_name@</td>
-                                            <th scope="row">Attempts</th>
-                                            <td>@customer.Attempts@</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Campaign</th>
-                                            <td>@Call.campaign_name@</td>
-                                            <th scope="row">Type</th>
-                                            <td>@Call.type@</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="customer_details" role="tabpanel">
-                                <div class="well">
-                                    <h5><span class="text-danger">Hold Time: @Call.hold_time@</span></h5>
-                                    <table class="table table-striped">
-                                        <tr>
-                                            <th scope="row">Customer Name</th>
-                                            <td>@Customer.first_name@ @Customer.last_name@</td>
-                                            <th scope="row">CID</th>
-                                            <td>@Customer.ClientUniqueId@</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Address</th>
-                                            <td>@Customer.street@</td>
-                                            <th scope="row">City</th>
-                                            <td>@Customer.city@</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">State</th>
-                                            <td>@Customer.state@</td>
-                                            <th scope="row">Zip</th>
-                                            <td>@Customer.zip@</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                        </tr>
-                                    </table>
-                                    <h4>Comments</h4>@Call.comments@
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="campaign_info" role="tabpanel">
-                                <div class="well">
-                                    <p>Outbound CoReg lead.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- /Customer and Call Detail Tabs -->
-                    
+                                        
 <!-- Intro (partial_intro_outbound)-->
                     <h2><span aria-hidden="true" class="glyphicon glyphicon-heart"></span> Intro</h2>
                     <div class="panel panel-default">
@@ -163,37 +91,57 @@
 							<h5 class="panel-title">Call Introduction</h5>
 						</div> -->
                         <div class="panel-body">
-                        <p>Hello, is this <strong>@Customer.first_name@ @Customer.last_name@</strong>? Hi, this is <strong>@Agent.full_name@</strong>, from PillPack Pharmacy on a recorded line.</p>
-                        
-						<p>Recently you filled out a from and expressed interest in Pillpack Pharmacy. At Pillpack we help simplify your life by sorting you prescriptions and delivering them directly to you. We provide this service at no additional cost to you, you will simply cover the copays as you do with your current pharmacy.</p>
-                        </div>
-                    </div>
-                    <hr>
-<!-- /Intro -->
-                                       
-<!-- Special Offer (partial_special-offer)-->
-					<h2><span aria-hidden="true" class="glyphicon glyphicon-star"></span> Special Offer</h2>
-					<div class="panel-group">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h5 class="panel-title">Coupon for 5 or more Meds</h5>
-							</div>
-							<div class="panel-body">
-								<p>Do you currently take 5 or more medications?</p>
-								<ul>
-									<li><strong>If YES</strong> - We can offer you a $25 coupon for any OTCs that you would like to add to your PillPack.</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					
-					<div class="alert alert-info" role="alert">
+                        <p>Hello, is this <strong>@Customer.first_name@ @Customer.last_name@</strong>? This is <strong>@Agent.full_name@</strong> from PillPack Pharmacy on a recorded line. Our records show that you take multiple prescription medications, is that right?</p>
+
+<ul>
+	<li><strong>Yes</strong> - “Perfect! PillPack is designed for people who take multiple prescriptions and this month we are giving a $25 credit to those that qualify.”
+	<div class="alert alert-info" role="alert">
 						<p><strong><span aria-hidden="true" class="glyphicon glyphicon-info-sign"></span> Coupon Information</strong></p>
 						<p>The offer code is <strong>PPCOTC25</strong>. It will add $25 of OTC credit to the customer's account.</p>
 						<p>Only 1 promo code can be added to a customer's profile, and once it's been added, it can't be removed or swapped out for another one.</p>
 					</div>
-					<hr>
-<!-- /Special Offer -->
+					</li>
+	
+	<li><strong>No</strong> - (If they only take 1 prescription or only OTCs then they are not a good fit for PillPack. Thank them for their time and move on.)</li>
+</ul>
+<hr>
+<p>How many prescriptions are you currently taking?</p>
+<ul>
+	<li><strong>If more than 5</strong> - “I have good news! You qualify for the $25 credit on all over-the-counter medications!”</li>
+	<li><strong>If less than 5</strong> - (Continue with script)</li>
+</ul>
+<hr>
+<p>Which insurance covers the cost of your prescriptions?</p>
+<ul>
+	<li>(Verify that we accept their insurance)</li>
+</ul>
+<hr>
+<p>And how do you normally cover the cost of your copays?</p>
+
+<p>Thank you. Now here’s how PillPack works:</p>
+<ul>
+	<li>We pre-sort your medications and organize them into individual packets.</li>
+	<li>We print the date and time you need to take your medications right on the packet itself.</li>
+	<li>Now, you’ll never have to sort your pills.</li>
+	<li>You’ll never have to worry about missing your medications.</li>
+	<li>And you’ll never have to make a trip to the pharmacy - we deliver these packets straight to your door every month.</li>
+	<li>And you get automatic refills delivered directly to your door with free shipping.</li>
+	<li>The best part is, we customize all of this for you at no additional cost. The only thing you still need to cover are copays, if you have them.</li>
+</ul>
+<hr>
+<p>All I need to do is get some basic information from you and we will send you your first PillPack within the next couple weeks.</p>
+
+<p>First, let me verify that I’m talking to the right person.</p>
+<ul>
+	<li>Can you verify your last name for me?</li>
+	<li>Can you verify your address for me?</li>
+	<li>Can you verify your email for me?</li>
+</ul>
+                        </div>
+                    </div>
+                    <hr>
+<!-- /Intro -->
+                                      
                     
 <!-- PillPack Pitch Area (partial_pitch_area_trg_diab)-->
 					<h2><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Sales Pitch</h2>
